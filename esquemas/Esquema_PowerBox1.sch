@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -12039,7 +12039,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="30.48" y="101.6" size="1.778" layer="91" rot="R90">Load +</text>
 <text x="-7.62" y="60.96" size="1.778" layer="91">I. General</text>
 <text x="119.38" y="48.26" size="1.778" layer="91">A DC-DC 12v (1)</text>
-<text x="-20.32" y="134.62" size="6.4516" layer="92">Esquema conexionado caja "Negra"</text>
+<text x="-20.32" y="134.62" size="6.4516" layer="92">Esquema conexionado PowerBox1</text>
 </plain>
 <instances>
 <instance part="F1" gate="1" x="-10.16" y="66.04"/>

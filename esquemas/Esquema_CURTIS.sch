@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.02" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.002" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -5014,7 +5014,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <parts>
 <part name="S1" library="SparkFun-Switches" deviceset="SWITCH-SP3T" device="-SMD"/>
 <part name="S2" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" value=" "/>
-<part name="S4" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" value=" "/>
 <part name="FUSE_20A" library="fuse" deviceset="GSH15" device=""/>
 <part name="R1" library="rcl" deviceset="POTENTIOMETER_" device="PT-10S"/>
 <part name="S6" library="SparkFun-Switches" deviceset="SWITCH-SPDT" device="-PTH-11.6X4.0MM"/>
@@ -5035,20 +5034,28 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
-<text x="109.728" y="91.948" size="1.778" layer="91">Anilla 60</text>
+<text x="94.742" y="89.408" size="1.778" layer="91">Anilla 60</text>
 <text x="89.916" y="84.328" size="1.778" layer="91">Anilla 33</text>
 <text x="145.288" y="68.58" size="1.778" layer="91">Anilla 28</text>
 <text x="10.16" y="25.908" size="1.778" layer="91">del AO0 del Arduino</text>
 <text x="10.668" y="23.368" size="1.778" layer="91">de la "caja blanca"</text>
-<text x="116.84" y="62.484" size="1.778" layer="91">Anilla 28</text>
-<text x="99.06" y="58.928" size="1.778" layer="91">Anilla 1</text>
-<text x="116.84" y="44.196" size="1.778" layer="91">Anilla 98</text>
+<text x="112.014" y="67.818" size="1.778" layer="91">Anilla 28</text>
+<text x="112.268" y="55.372" size="1.778" layer="91">Anilla 1</text>
+<text x="108.204" y="39.878" size="1.778" layer="91">Anilla 98</text>
 <text x="10.668" y="59.436" size="1.778" layer="91">Pedal Interlock</text>
+<text x="88.9" y="77.724" size="1.778" layer="91">Anilla 28</text>
+<text x="22.86" y="43.18" size="1.778" layer="91">Anilla 6</text>
+<text x="25.654" y="30.48" size="1.778" layer="91">Anilla 7</text>
+<text x="24.13" y="36.068" size="1.778" layer="91">Anilla 4</text>
+<text x="5.588" y="86.106" size="1.778" layer="91">N</text>
+<text x="23.368" y="86.614" size="1.778" layer="91">Anilla 90</text>
+<text x="23.622" y="81.026" size="1.778" layer="91">Anilla 91</text>
+<text x="112.014" y="62.23" size="1.778" layer="91">Anilla 67</text>
+<text x="94.742" y="65.024" size="1.778" layer="91">LOGIC_POWER</text>
 </plain>
 <instances>
 <instance part="S1" gate="G$1" x="0" y="86.36"/>
 <instance part="S2" gate="G$1" x="0" y="63.5"/>
-<instance part="S4" gate="G$1" x="134.112" y="57.912"/>
 <instance part="FUSE_20A" gate="1" x="144.78" y="42.672" rot="R90"/>
 <instance part="R1" gate="1" x="-5.08" y="40.64" rot="R90"/>
 <instance part="S6" gate="1" x="20.32" y="38.1" rot="R180"/>
@@ -5106,17 +5113,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-5.08" y1="45.72" x2="30.48" y2="45.72" width="0.1524" layer="91"/>
 <label x="20.828" y="46.228" size="1.778" layer="95"/>
 <pinref part="U$1" gate="G$1" pin="J1-13"/>
-</segment>
-</net>
-<net name="KSI" class="0">
-<segment>
-<pinref part="S4" gate="G$1" pin="1"/>
-<wire x1="129.032" y1="57.912" x2="91.44" y2="57.912" width="0.1524" layer="91"/>
-<pinref part="L1" gate="G$1" pin="2"/>
-<wire x1="129.032" y1="42.164" x2="129.032" y2="57.912" width="0.1524" layer="91"/>
-<junction x="129.032" y="57.912"/>
-<label x="94.488" y="58.42" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="J1-1"/>
 </segment>
 </net>
 <net name="MAIN_CONTACTOR" class="0">
@@ -5254,34 +5250,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="94.996" y="91.948" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="LOGIC_POWER" class="0">
-<segment>
-<pinref part="S2" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="58.42" x2="-5.08" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="58.42" x2="-5.08" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="S1" gate="G$1" pin="3"/>
-<wire x1="-5.08" y1="86.36" x2="-5.08" y2="63.5" width="0.1524" layer="91"/>
-<junction x="-5.08" y="63.5"/>
-<wire x1="144.78" y1="104.14" x2="-5.08" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="104.14" x2="-5.08" y2="86.36" width="0.1524" layer="91"/>
-<junction x="-5.08" y="86.36"/>
-<pinref part="U$7" gate="G$1" pin="2"/>
-<wire x1="132.588" y1="82.296" x2="144.78" y2="82.296" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="64.516" x2="144.78" y2="82.296" width="0.1524" layer="91"/>
-<junction x="144.78" y="64.516"/>
-<wire x1="144.78" y1="57.912" x2="144.78" y2="64.516" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="64.516" x2="144.78" y2="64.516" width="0.1524" layer="91"/>
-<label x="94.488" y="65.024" size="1.778" layer="95"/>
-<wire x1="144.78" y1="104.14" x2="144.78" y2="82.296" width="0.1524" layer="91"/>
-<junction x="144.78" y="82.296"/>
-<pinref part="S4" gate="G$1" pin="2"/>
-<wire x1="139.192" y1="57.912" x2="144.78" y2="57.912" width="0.1524" layer="91"/>
-<pinref part="INTERRUPTOR_PRINCIPAL" gate="G$1" pin="1"/>
-<junction x="144.78" y="57.912"/>
-<pinref part="U$1" gate="G$1" pin="J1-8"/>
-<pinref part="U$1" gate="G$1" pin="J1-4"/>
-</segment>
-</net>
 <net name="LED_DRIVER" class="0">
 <segment>
 <wire x1="30.48" y1="12.7" x2="2.54" y2="12.7" width="0.1524" layer="91"/>
@@ -5344,6 +5312,38 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U$6" gate="G$1" pin="-"/>
 <pinref part="U$1" gate="G$1" pin="J1-23"/>
 <wire x1="94.996" y1="80.772" x2="91.44" y2="80.772" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="KSI" class="0">
+<segment>
+<pinref part="S2" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="58.42" x2="-5.08" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="58.42" x2="-5.08" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="S1" gate="G$1" pin="3"/>
+<wire x1="-5.08" y1="86.36" x2="-5.08" y2="63.5" width="0.1524" layer="91"/>
+<junction x="-5.08" y="63.5"/>
+<wire x1="144.78" y1="104.14" x2="-5.08" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="104.14" x2="-5.08" y2="86.36" width="0.1524" layer="91"/>
+<junction x="-5.08" y="86.36"/>
+<pinref part="U$7" gate="G$1" pin="2"/>
+<wire x1="132.588" y1="82.296" x2="144.78" y2="82.296" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="64.516" x2="144.78" y2="82.296" width="0.1524" layer="91"/>
+<junction x="144.78" y="64.516"/>
+<wire x1="144.78" y1="57.912" x2="144.78" y2="64.516" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="64.516" x2="144.78" y2="64.516" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="104.14" x2="144.78" y2="82.296" width="0.1524" layer="91"/>
+<junction x="144.78" y="82.296"/>
+<pinref part="INTERRUPTOR_PRINCIPAL" gate="G$1" pin="1"/>
+<junction x="144.78" y="57.912"/>
+<pinref part="U$1" gate="G$1" pin="J1-8"/>
+<pinref part="U$1" gate="G$1" pin="J1-4"/>
+<wire x1="129.032" y1="57.912" x2="91.44" y2="57.912" width="0.1524" layer="91"/>
+<pinref part="L1" gate="G$1" pin="2"/>
+<wire x1="129.032" y1="42.164" x2="129.032" y2="57.912" width="0.1524" layer="91"/>
+<label x="94.488" y="58.42" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="J1-1"/>
+<wire x1="144.78" y1="57.912" x2="129.032" y2="57.912" width="0.1524" layer="91"/>
+<junction x="129.032" y="57.912"/>
 </segment>
 </net>
 </nets>

@@ -12038,7 +12038,7 @@ DIN A4, landscape with location and doc. field</description>
 <text x="15.24" y="101.6" size="1.778" layer="91" rot="R90">Load -</text>
 <text x="30.48" y="101.6" size="1.778" layer="91" rot="R90">Load +</text>
 <text x="-7.62" y="60.96" size="1.778" layer="91">I. General</text>
-<text x="119.38" y="48.26" size="1.778" layer="91">A DC-DC 12v (1)</text>
+<text x="119.38" y="48.26" size="1.778" layer="91">A ORDENADOR</text>
 <text x="-20.32" y="134.62" size="6.4516" layer="92">Esquema conexionado PowerBox1</text>
 </plain>
 <instances>

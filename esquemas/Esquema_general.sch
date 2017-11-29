@@ -342,6 +342,27 @@
 <pad name="P$6" x="1.27" y="7.62" drill="0.6" shape="offset"/>
 <rectangle x1="0" y1="0" x2="1.27" y2="8.89" layer="21"/>
 </package>
+<package name="MONITOR">
+<pad name="P$1" x="20.32" y="5.08" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$2" x="16.51" y="5.08" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$3" x="3.81" y="5.08" drill="0.6" shape="offset" rot="R90"/>
+<polygon width="0.127" layer="21" pour="hatch">
+<vertex x="0" y="5.08"/>
+<vertex x="24.13" y="5.08"/>
+<vertex x="24.13" y="0"/>
+<vertex x="0" y="0"/>
+</polygon>
+</package>
+<package name="SICK">
+<pad name="P$1" x="1.27" y="6.35" drill="0.6" shape="square"/>
+<pad name="P$2" x="6.35" y="6.35" drill="0.6" shape="square"/>
+<pad name="P$3" x="11.43" y="6.35" drill="0.6" shape="square"/>
+<pad name="P$4" x="3.81" y="3.81" drill="0.6" shape="square"/>
+<pad name="P$5" x="8.89" y="3.81" drill="0.6" shape="square"/>
+<pad name="P$6" x="3.81" y="0" drill="0.6" shape="offset" rot="R270"/>
+<pad name="P$7" x="8.89" y="0" drill="0.6" shape="offset" rot="R270"/>
+<rectangle x1="0" y1="0" x2="12.7" y2="7.62" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MOTOR_DIRECCION">
@@ -685,6 +706,30 @@ Highspeed 4-input 1047</text>
 <pin name="OUT_Z" x="25.4" y="-7.62" length="middle" rot="R90"/>
 <text x="2.54" y="27.94" size="4" layer="94">YUMO
 E6B2-CWZ3E</text>
+</symbol>
+<symbol name="MONITOR">
+<wire x1="0" y1="0" x2="350.52" y2="0" width="0.254" layer="94"/>
+<wire x1="350.52" y1="0" x2="350.52" y2="33.02" width="0.254" layer="94"/>
+<wire x1="350.52" y1="33.02" x2="0" y2="33.02" width="0.254" layer="94"/>
+<wire x1="0" y1="33.02" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="VCC_19V" x="246.38" y="38.1" length="middle" rot="R270"/>
+<pin name="GND" x="254" y="38.1" length="middle" rot="R270"/>
+<pin name="VGA" x="203.2" y="40.64" rot="R270"/>
+<text x="119.38" y="5.08" size="20" layer="94">MONITOR</text>
+</symbol>
+<symbol name="SICK">
+<wire x1="0" y1="0" x2="149.86" y2="0" width="0.254" layer="94"/>
+<wire x1="149.86" y1="0" x2="149.86" y2="99.06" width="0.254" layer="94"/>
+<wire x1="0" y1="99.06" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="99.06" x2="149.86" y2="99.06" width="0.254" layer="94"/>
+<pin name="CON_1" x="17.78" y="-5.08" length="middle" rot="R90"/>
+<pin name="CON_2" x="20.32" y="-5.08" length="middle" rot="R90"/>
+<pin name="CON_3" x="22.86" y="-5.08" length="middle" rot="R90"/>
+<pin name="CON_4" x="25.4" y="-5.08" length="middle" rot="R90"/>
+<pin name="CON_5" x="27.94" y="-5.08" length="middle" rot="R90"/>
+<pin name="VCC" x="114.3" y="-5.08" length="middle" rot="R90"/>
+<pin name="GND" x="116.84" y="-5.08" length="middle" rot="R90"/>
+<text x="7.62" y="35.56" size="45" layer="94">SICK</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1037,6 +1082,44 @@ E6B2-CWZ3E</text>
 </device>
 </devices>
 </deviceset>
+<deviceset name="MONITOR">
+<gates>
+<gate name="G$1" symbol="MONITOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MONITOR">
+<connects>
+<connect gate="G$1" pin="GND" pad="P$1"/>
+<connect gate="G$1" pin="VCC_19V" pad="P$2"/>
+<connect gate="G$1" pin="VGA" pad="P$3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SICK">
+<gates>
+<gate name="G$1" symbol="SICK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SICK">
+<connects>
+<connect gate="G$1" pin="CON_1" pad="P$1"/>
+<connect gate="G$1" pin="CON_2" pad="P$2"/>
+<connect gate="G$1" pin="CON_3" pad="P$3"/>
+<connect gate="G$1" pin="CON_4" pad="P$4"/>
+<connect gate="G$1" pin="CON_5" pad="P$5"/>
+<connect gate="G$1" pin="GND" pad="P$6"/>
+<connect gate="G$1" pin="VCC" pad="P$7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -1076,6 +1159,8 @@ E6B2-CWZ3E</text>
 <part name="U$16" library="ecar" deviceset="PC" device=""/>
 <part name="U$26" library="ecar" deviceset="ENCODER_YUMO" device=""/>
 <part name="U$27" library="ecar" deviceset="ENCODER_YUMO" device=""/>
+<part name="U$28" library="ecar" deviceset="MONITOR" device=""/>
+<part name="U$29" library="ecar" deviceset="SICK" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1109,6 +1194,8 @@ E6B2-CWZ3E</text>
 <instance part="U$16" gate="G$1" x="7.62" y="5.08"/>
 <instance part="U$26" gate="G$1" x="198.12" y="632.46"/>
 <instance part="U$27" gate="G$1" x="238.76" y="-40.64" rot="R180"/>
+<instance part="U$28" gate="G$1" x="1087.12" y="284.48" rot="R270"/>
+<instance part="U$29" gate="G$1" x="1363.98" y="327.66" rot="R270"/>
 </instances>
 <busses>
 </busses>

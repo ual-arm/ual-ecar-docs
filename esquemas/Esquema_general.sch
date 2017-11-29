@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -215,14 +215,6 @@
 <rectangle x1="29.21" y1="-3.81" x2="38.1" y2="-2.54" layer="21"/>
 <text x="33.02" y="7.62" size="1.27" layer="21">J3</text>
 </package>
-<package name="BATERIA">
-<wire x1="0" y1="0" x2="-16.51" y2="0" width="0.127" layer="21"/>
-<wire x1="-16.51" y1="0" x2="-16.51" y2="25.4" width="0.127" layer="21"/>
-<wire x1="-16.51" y1="25.4" x2="0" y2="25.4" width="0.127" layer="21"/>
-<wire x1="0" y1="25.4" x2="0" y2="0" width="0.127" layer="21"/>
-<pad name="-" x="-7.62" y="0" drill="0.8" shape="long" rot="R90"/>
-<pad name="+" x="-7.62" y="25.4" drill="0.8" shape="long" rot="R90"/>
-</package>
 <package name="AMPERIMETRO">
 <polygon width="0.127" layer="21">
 <vertex x="0" y="0"/>
@@ -237,6 +229,118 @@
 <pad name="P$4" x="17.78" y="-1.27" drill="0.8" shape="offset" rot="R90"/>
 <pad name="P$5" x="0" y="6.35" drill="0.8" shape="square"/>
 <pad name="P$6" x="21.59" y="6.35" drill="0.8" shape="square"/>
+</package>
+<package name="BATERIA">
+<wire x1="0" y1="0" x2="-16.51" y2="0" width="0.127" layer="21"/>
+<wire x1="-16.51" y1="0" x2="-16.51" y2="25.4" width="0.127" layer="21"/>
+<wire x1="-16.51" y1="25.4" x2="0" y2="25.4" width="0.127" layer="21"/>
+<wire x1="0" y1="25.4" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="-" x="-7.62" y="0" drill="0.8" shape="long" rot="R90"/>
+<pad name="+" x="-7.62" y="25.4" drill="0.8" shape="long" rot="R90"/>
+</package>
+<package name="POWERBOX">
+<wire x1="0" y1="0" x2="0" y2="15.24" width="0.127" layer="21"/>
+<wire x1="0" y1="15.24" x2="22.86" y2="15.24" width="0.127" layer="21"/>
+<wire x1="22.86" y1="15.24" x2="22.86" y2="0" width="0.127" layer="21"/>
+<wire x1="22.86" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="2.54" y="11.43" drill="0.6" shape="square"/>
+<pad name="P$2" x="6.35" y="11.43" drill="0.6" shape="square"/>
+<pad name="P$3" x="10.16" y="11.43" drill="0.6" shape="square"/>
+<pad name="P$4" x="13.97" y="11.43" drill="0.6" shape="square"/>
+<pad name="P$5" x="17.78" y="11.43" drill="0.6" shape="square"/>
+<pad name="P$6" x="2.54" y="5.08" drill="0.6" shape="square"/>
+<pad name="P$7" x="6.35" y="5.08" drill="0.6" shape="square"/>
+<pad name="P$8" x="10.16" y="5.08" drill="0.6" shape="square"/>
+<pad name="P$9" x="13.97" y="5.08" drill="0.6" shape="square"/>
+<pad name="P$10" x="17.78" y="5.08" drill="0.6" shape="square"/>
+</package>
+<package name="FUENTE_12V">
+<wire x1="0" y1="0" x2="0" y2="12.7" width="0.127" layer="21"/>
+<wire x1="0" y1="12.7" x2="1.27" y2="12.7" width="0.127" layer="21"/>
+<wire x1="1.27" y1="12.7" x2="1.27" y2="0" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="1.27" y="11.43" drill="0.6" shape="octagon"/>
+<pad name="P$2" x="1.27" y="8.89" drill="0.6" shape="octagon"/>
+<pad name="P$3" x="1.27" y="5.08" drill="0.6" shape="octagon"/>
+<pad name="P$4" x="1.27" y="2.54" drill="0.6" shape="octagon"/>
+</package>
+<package name="FUENTE_24V">
+<wire x1="0" y1="0" x2="0" y2="12.7" width="0.127" layer="21"/>
+<wire x1="0" y1="12.7" x2="1.27" y2="12.7" width="0.127" layer="21"/>
+<wire x1="1.27" y1="12.7" x2="1.27" y2="0" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="1.27" y="11.43" drill="0.6" shape="octagon"/>
+<pad name="P$2" x="1.27" y="10.16" drill="0.6" shape="octagon"/>
+<pad name="P$3" x="1.27" y="2.54" drill="0.6" shape="octagon"/>
+<pad name="P$4" x="1.27" y="1.27" drill="0.6" shape="octagon"/>
+<pad name="P$5" x="1.27" y="5.08" drill="0.6" shape="octagon"/>
+<pad name="P$6" x="1.27" y="6.35" drill="0.6" shape="octagon"/>
+</package>
+<package name="GPS">
+<wire x1="0" y1="0" x2="0" y2="17.78" width="0.127" layer="21"/>
+<wire x1="0" y1="17.78" x2="15.24" y2="17.78" width="0.127" layer="21"/>
+<wire x1="15.24" y1="17.78" x2="15.24" y2="0" width="0.127" layer="21"/>
+<wire x1="15.24" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="2.54" y="17.78" drill="0.6"/>
+<pad name="P$2" x="11.43" y="17.78" drill="0.6" shape="offset" rot="R90"/>
+</package>
+<package name="PHIDGETS">
+<wire x1="0" y1="0" x2="31.75" y2="0" width="0.127" layer="21"/>
+<wire x1="31.75" y1="0" x2="31.75" y2="29.21" width="0.127" layer="21"/>
+<wire x1="31.75" y1="29.21" x2="0" y2="29.21" width="0.127" layer="21"/>
+<wire x1="0" y1="29.21" x2="0" y2="0" width="0.127" layer="21"/>
+<rectangle x1="17.78" y1="0" x2="22.86" y2="2.54" layer="21"/>
+<pad name="P$1" x="20.32" y="0" drill="0.6" shape="long"/>
+<pad name="P$2" x="31.75" y="3.81" drill="0.6" shape="long"/>
+<pad name="P$3" x="31.75" y="6.35" drill="0.6" shape="long"/>
+<pad name="P$4" x="31.75" y="8.89" drill="0.6" shape="long"/>
+<pad name="P$5" x="31.75" y="11.43" drill="0.6" shape="long"/>
+<pad name="P$6" x="31.75" y="13.97" drill="0.6" shape="long"/>
+<pad name="P$7" x="31.75" y="16.51" drill="0.6" shape="long"/>
+<pad name="P$8" x="30.48" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$9" x="29.21" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$10" x="27.94" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$11" x="26.67" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$12" x="25.4" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$13" x="22.86" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$14" x="21.59" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$15" x="20.32" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$16" x="19.05" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$17" x="17.78" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$18" x="15.24" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$19" x="13.97" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$20" x="12.7" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$21" x="11.43" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$22" x="10.16" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$23" x="7.62" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$24" x="6.35" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$25" x="5.08" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$26" x="3.81" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$27" x="2.54" y="29.21" drill="0.6" shape="offset" rot="R90"/>
+</package>
+<package name="PC">
+<wire x1="0" y1="0" x2="0" y2="12.7" width="0.127" layer="21"/>
+<wire x1="0" y1="12.7" x2="17.78" y2="12.7" width="0.127" layer="21"/>
+<wire x1="17.78" y1="12.7" x2="17.78" y2="0" width="0.127" layer="21"/>
+<wire x1="17.78" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="2.54" y="10.16" drill="0.6" shape="square"/>
+<pad name="P$2" x="5.08" y="10.16" drill="0.6" shape="square"/>
+<pad name="P$3" x="7.62" y="10.16" drill="0.6" shape="square"/>
+<pad name="P$4" x="10.16" y="10.16" drill="0.6" shape="square"/>
+<pad name="P$5" x="5.08" y="6.35" drill="0.6" shape="square"/>
+<pad name="P$6" x="7.62" y="6.35" drill="0.6" shape="square"/>
+<pad name="P$7" x="10.16" y="6.35" drill="0.6" shape="square"/>
+<pad name="P$8" x="12.7" y="6.35" drill="0.6" shape="square"/>
+<pad name="P$9" x="12.7" y="10.16" drill="0.6" shape="square"/>
+</package>
+<package name="ENCODER">
+<pad name="P$1" x="1.27" y="1.27" drill="0.6" shape="offset"/>
+<pad name="P$2" x="1.27" y="2.54" drill="0.6" shape="offset"/>
+<pad name="P$3" x="1.27" y="3.81" drill="0.6" shape="offset"/>
+<pad name="P$4" x="1.27" y="5.08" drill="0.6" shape="offset"/>
+<pad name="P$5" x="1.27" y="6.35" drill="0.6" shape="offset"/>
+<pad name="P$6" x="1.27" y="7.62" drill="0.6" shape="offset"/>
+<rectangle x1="0" y1="0" x2="1.27" y2="8.89" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -377,31 +481,6 @@
 <pin name="J3-3" x="-30.48" y="-85.344" length="middle"/>
 <pin name="J3-4" x="-30.48" y="-88.9" length="middle"/>
 </symbol>
-<symbol name="BATERIA">
-<pin name="-" x="-6.096" y="-5.08" length="middle" rot="R90"/>
-<pin name="+" x="-6.096" y="21.336" length="middle" rot="R270"/>
-<text x="-10.668" y="4.572" size="1.778" layer="94" rot="R90">Baterías</text>
-<wire x1="0" y1="0" x2="-6.096" y2="0" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="0" x2="-6.096" y2="3.556" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="3.556" x2="-8.128" y2="3.556" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="3.556" x2="-4.064" y2="3.556" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="4.572" x2="-2.54" y2="4.572" width="0.254" layer="94"/>
-<wire x1="-8.128" y1="5.588" x2="-4.064" y2="5.588" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="6.604" x2="-6.096" y2="6.604" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="6.604" x2="-10.16" y2="6.604" width="0.254" layer="94"/>
-<wire x1="-8.128" y1="9.652" x2="-6.096" y2="9.652" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="9.652" x2="-4.064" y2="9.652" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="10.668" x2="-10.16" y2="10.668" width="0.254" layer="94"/>
-<wire x1="-8.128" y1="11.684" x2="-4.064" y2="11.684" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="12.7" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="12.7" x2="-2.54" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="12.7" x2="-6.096" y2="15.748" width="0.254" layer="94"/>
-<wire x1="-6.096" y1="9.652" x2="-6.096" y2="6.604" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="16.256" width="0.254" layer="94"/>
-<wire x1="0" y1="16.256" x2="-12.7" y2="16.256" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="16.256" x2="-12.7" y2="0" width="0.254" layer="94"/>
-</symbol>
 <symbol name="AMPERIMETRO">
 <wire x1="0" y1="0" x2="17.78" y2="0" width="0.254" layer="94"/>
 <wire x1="17.78" y1="0" x2="17.78" y2="5.08" width="0.254" layer="94"/>
@@ -425,6 +504,187 @@
 <wire x1="6.35" y1="12.7" x2="16.51" y2="12.7" width="0.254" layer="94"/>
 <wire x1="0" y1="12.7" x2="2.54" y2="12.7" width="0.254" layer="94"/>
 <wire x1="16.51" y1="12.7" x2="17.78" y2="12.7" width="0.254" layer="94"/>
+</symbol>
+<symbol name="BATERIA">
+<text x="-71.628" y="27.432" size="10" layer="94" rot="R90">Baterías Greensaver</text>
+<wire x1="0" y1="0" x2="-114.3" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="176.276" width="0.254" layer="94"/>
+<wire x1="0" y1="176.276" x2="-114.3" y2="176.276" width="0.254" layer="94"/>
+<wire x1="-114.3" y1="176.276" x2="-114.3" y2="0" width="0.254" layer="94"/>
+<pin name="+VCC" x="7.62" y="152.4" rot="R180"/>
+<pin name="-VCC" x="7.62" y="25.4" rot="R180"/>
+<text x="-45.72" y="83.82" size="10" layer="94" rot="R90">6 V</text>
+</symbol>
+<symbol name="POWERBOX">
+<wire x1="0" y1="0" x2="139.7" y2="0" width="0.254" layer="94"/>
+<wire x1="139.7" y1="0" x2="139.7" y2="68.58" width="0.254" layer="94"/>
+<wire x1="139.7" y1="68.58" x2="0" y2="68.58" width="0.254" layer="94"/>
+<wire x1="0" y1="68.58" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="IN_VCC" x="147.32" y="45.72" rot="R180"/>
+<pin name="IN_GND" x="147.32" y="33.02" rot="R180"/>
+<rectangle x1="86.36" y1="5.08" x2="132.08" y2="30.48" layer="94"/>
+<pin name="OUT+1" x="30.48" y="-7.62" rot="R90"/>
+<pin name="OUT-1" x="38.1" y="-7.62" rot="R90"/>
+<pin name="OUT+2" x="45.72" y="-7.62" rot="R90"/>
+<pin name="OUT-2" x="53.34" y="-7.62" rot="R90"/>
+<pin name="OUT+3" x="60.96" y="-7.62" rot="R90"/>
+<pin name="OUT-3" x="68.58" y="-7.62" rot="R90"/>
+<pin name="+5V" x="104.14" y="-7.62" rot="R90"/>
+<pin name="GND(5V)" x="111.76" y="-7.62" rot="R90"/>
+<circle x="111.76" y="50.8" radius="8.032184375" width="0.254" layer="94"/>
+<circle x="63.5" y="50.8" radius="7.62" width="0.254" layer="94"/>
+<circle x="63.5" y="22.86" radius="7.62" width="0.254" layer="94"/>
+<circle x="27.94" y="50.8" radius="7.62" width="0.254" layer="94"/>
+<circle x="27.94" y="22.86" radius="8.032184375" width="0.254" layer="94"/>
+</symbol>
+<symbol name="FUENTE_12V">
+<wire x1="0" y1="0" x2="71.12" y2="0" width="0.254" layer="94"/>
+<wire x1="71.12" y1="0" x2="71.12" y2="124.46" width="0.254" layer="94"/>
+<wire x1="71.12" y1="124.46" x2="0" y2="124.46" width="0.254" layer="94"/>
+<wire x1="0" y1="124.46" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="IN_+48V" x="5.08" y="132.08" rot="R270"/>
+<pin name="IN_GND" x="12.7" y="132.08" rot="R270"/>
+<pin name="OUT_+12V" x="50.8" y="132.08" rot="R270"/>
+<pin name="OUT_GND" x="58.42" y="132.08" rot="R270"/>
+<text x="45.72" y="10.16" size="10" layer="94" rot="R90">FUENTE DC-DC
+        12V</text>
+</symbol>
+<symbol name="FUENTE_24V">
+<wire x1="0" y1="0" x2="71.12" y2="0" width="0.254" layer="94"/>
+<wire x1="71.12" y1="0" x2="71.12" y2="124.46" width="0.254" layer="94"/>
+<wire x1="71.12" y1="124.46" x2="0" y2="124.46" width="0.254" layer="94"/>
+<wire x1="0" y1="124.46" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="IN_+48V" x="5.08" y="132.08" rot="R270"/>
+<pin name="IN_GND" x="12.7" y="132.08" rot="R270"/>
+<pin name="OUT1_+24V" x="50.8" y="132.08" rot="R270"/>
+<pin name="OUT1_GND" x="58.42" y="132.08" rot="R270"/>
+<text x="45.72" y="10.16" size="10" layer="94" rot="R90">FUENTE DC-DC
+        24V</text>
+<pin name="OUT2_GND" x="43.18" y="132.08" rot="R270"/>
+<pin name="OUT2_+24V" x="35.56" y="132.08" rot="R270"/>
+</symbol>
+<symbol name="GPS">
+<wire x1="0" y1="0" x2="60.96" y2="0" width="0.254" layer="94"/>
+<wire x1="60.96" y1="0" x2="60.96" y2="101.6" width="0.254" layer="94"/>
+<wire x1="60.96" y1="101.6" x2="0" y2="101.6" width="0.254" layer="94"/>
+<wire x1="0" y1="101.6" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="ANTENA" x="10.16" y="104.14" length="short" rot="R270"/>
+<pin name="IN_12V" x="48.26" y="109.22" rot="R270"/>
+<rectangle x1="50.8" y1="101.6" x2="55.88" y2="104.14" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="7.62" y="91.44"/>
+<vertex x="53.34" y="91.44"/>
+<vertex x="53.34" y="63.5"/>
+<vertex x="7.62" y="63.5"/>
+</polygon>
+<polygon width="0.254" layer="94">
+<vertex x="10.16" y="88.9"/>
+<vertex x="10.16" y="66.04"/>
+<vertex x="50.8" y="66.04"/>
+<vertex x="50.8" y="88.9"/>
+</polygon>
+<text x="5.08" y="25.4" size="20" layer="94">GPS</text>
+</symbol>
+<symbol name="PHIDGETS">
+<wire x1="0" y1="0" x2="63.5" y2="0" width="0.254" layer="94"/>
+<wire x1="63.5" y1="0" x2="63.5" y2="55.88" width="0.254" layer="94"/>
+<wire x1="63.5" y1="55.88" x2="0" y2="55.88" width="0.254" layer="94"/>
+<wire x1="0" y1="55.88" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="USB" x="40.64" y="-2.54" length="short" rot="R90"/>
+<pin name="IN_GND" x="66.04" y="7.62" length="short" rot="R180"/>
+<pin name="IN_3" x="66.04" y="12.7" length="short" rot="R180"/>
+<pin name="IN_2" x="66.04" y="17.78" length="short" rot="R180"/>
+<pin name="IN_1" x="66.04" y="22.86" length="short" rot="R180"/>
+<pin name="IN_0" x="66.04" y="27.94" length="short" rot="R180"/>
+<pin name="IN_5V" x="66.04" y="33.02" length="short" rot="R180"/>
+<pin name="E3_GND" x="2.54" y="63.5" rot="R270"/>
+<pin name="E3_INDEX" x="5.08" y="63.5" rot="R270"/>
+<pin name="E3_A" x="7.62" y="63.5" rot="R270"/>
+<pin name="E3_5V" x="10.16" y="63.5" rot="R270"/>
+<pin name="E3_B" x="12.7" y="63.5" rot="R270"/>
+<pin name="E2_GND" x="17.78" y="63.5" rot="R270"/>
+<pin name="E2_INDEX" x="20.32" y="63.5" rot="R270"/>
+<pin name="E2_A" x="22.86" y="63.5" rot="R270"/>
+<pin name="E2_5V" x="25.4" y="63.5" rot="R270"/>
+<pin name="E2_B" x="27.94" y="63.5" rot="R270"/>
+<pin name="E1_GND" x="33.02" y="63.5" rot="R270"/>
+<pin name="E1_INDEX" x="35.56" y="63.5" rot="R270"/>
+<pin name="E1_A" x="38.1" y="63.5" rot="R270"/>
+<pin name="E1_5V" x="40.64" y="63.5" rot="R270"/>
+<pin name="E1_B" x="43.18" y="63.5" rot="R270"/>
+<pin name="E0_GND" x="48.26" y="63.5" rot="R270"/>
+<pin name="E0_INDEX" x="50.8" y="63.5" rot="R270"/>
+<pin name="E0_A" x="53.34" y="63.5" rot="R270"/>
+<pin name="E0_5V" x="55.88" y="63.5" rot="R270"/>
+<pin name="E0_B" x="58.42" y="63.5" rot="R270"/>
+<circle x="5.08" y="5.08" radius="2.54" width="0.254" layer="94"/>
+<circle x="58.42" y="5.08" radius="2.54" width="0.254" layer="94"/>
+<circle x="58.42" y="40.64" radius="2.54" width="0.254" layer="94"/>
+<circle x="5.08" y="40.64" radius="2.54" width="0.254" layer="94"/>
+<rectangle x1="35.56" y1="0" x2="45.72" y2="5.08" layer="94"/>
+<polygon width="0.254" layer="94" pour="hatch">
+<vertex x="10.16" y="27.94"/>
+<vertex x="10.16" y="10.16"/>
+<vertex x="27.94" y="10.16"/>
+<vertex x="27.94" y="27.94"/>
+</polygon>
+<polygon width="0.254" layer="94" pour="hatch">
+<vertex x="45.72" y="30.48"/>
+<vertex x="45.72" y="20.32"/>
+<vertex x="50.8" y="20.32"/>
+<vertex x="50.8" y="30.48"/>
+</polygon>
+<polygon width="0.254" layer="94" pour="hatch">
+<vertex x="33.02" y="20.32"/>
+<vertex x="33.02" y="12.7"/>
+<vertex x="38.1" y="12.7"/>
+<vertex x="38.1" y="20.32"/>
+</polygon>
+<polygon width="0.254" layer="94" pour="hatch">
+<vertex x="33.02" y="22.86"/>
+<vertex x="33.02" y="30.48"/>
+<vertex x="38.1" y="30.48"/>
+<vertex x="38.1" y="22.86"/>
+</polygon>
+<text x="12.7" y="35.56" size="2.54" layer="94">    Phidget Encoder
+Highspeed 4-input 1047</text>
+</symbol>
+<symbol name="PC">
+<wire x1="0" y1="0" x2="243.84" y2="0" width="0.254" layer="94"/>
+<wire x1="243.84" y1="0" x2="243.84" y2="167.64" width="0.254" layer="94"/>
+<wire x1="243.84" y1="167.64" x2="0" y2="167.64" width="0.254" layer="94"/>
+<wire x1="0" y1="167.64" x2="0" y2="0" width="0.254" layer="94"/>
+<text x="30.48" y="25.4" size="100" layer="94" distance="100">PC</text>
+<pin name="USB2" x="251.46" y="144.78" rot="R180"/>
+<pin name="USB3" x="251.46" y="134.62" rot="R180"/>
+<pin name="USB4" x="251.46" y="124.46" rot="R180"/>
+<pin name="USB1" x="251.46" y="154.94" rot="R180"/>
+<pin name="ETHERNET" x="251.46" y="106.68" rot="R180"/>
+<pin name="FIREWIRE" x="251.46" y="83.82" rot="R180"/>
+<pin name="VCC" x="251.46" y="35.56" rot="R180"/>
+<pin name="GND" x="251.46" y="17.78" rot="R180"/>
+<pin name="VGA" x="251.46" y="63.5" rot="R180"/>
+</symbol>
+<symbol name="ENCODER">
+<wire x1="0" y1="0" x2="38.1" y2="0" width="0.254" layer="94"/>
+<wire x1="38.1" y1="0" x2="38.1" y2="40.64" width="0.254" layer="94"/>
+<wire x1="38.1" y1="40.64" x2="0" y2="40.64" width="0.254" layer="94"/>
+<wire x1="0" y1="40.64" x2="0" y2="0" width="0.254" layer="94"/>
+<rectangle x1="15.24" y1="40.64" x2="22.86" y2="55.88" layer="94"/>
+<polygon width="0.254" layer="94" pour="hatch">
+<vertex x="10.16" y="0"/>
+<vertex x="27.94" y="0"/>
+<vertex x="27.94" y="-2.54"/>
+<vertex x="10.16" y="-2.54"/>
+</polygon>
+<pin name="5-12V" x="12.7" y="-7.62" length="middle" rot="R90"/>
+<pin name="COMMON" x="15.24" y="-7.62" length="middle" rot="R90"/>
+<pin name="GND" x="17.78" y="-7.62" length="middle" rot="R90"/>
+<pin name="OUT_A" x="20.32" y="-7.62" length="middle" rot="R90"/>
+<pin name="OUT_B" x="22.86" y="-7.62" length="middle" rot="R90"/>
+<pin name="OUT_Z" x="25.4" y="-7.62" length="middle" rot="R90"/>
+<text x="2.54" y="27.94" size="4" layer="94">YUMO
+E6B2-CWZ3E</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -579,22 +839,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="BATERIA">
-<gates>
-<gate name="G$1" symbol="BATERIA" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BATERIA">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="AMPERIMETRO">
 <gates>
 <gate name="G$1" symbol="AMPERIMETRO" x="0" y="0"/>
@@ -608,6 +852,184 @@
 <connect gate="G$1" pin="VCC" pad="P$1"/>
 <connect gate="G$1" pin="VOUT" pad="P$4"/>
 <connect gate="G$1" pin="__" pad="P$3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BATERIA">
+<gates>
+<gate name="G$1" symbol="BATERIA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BATERIA">
+<connects>
+<connect gate="G$1" pin="+VCC" pad="+"/>
+<connect gate="G$1" pin="-VCC" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="POWERBOX">
+<gates>
+<gate name="G$1" symbol="POWERBOX" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="POWERBOX">
+<connects>
+<connect gate="G$1" pin="+5V" pad="P$1"/>
+<connect gate="G$1" pin="GND(5V)" pad="P$2"/>
+<connect gate="G$1" pin="IN_GND" pad="P$3"/>
+<connect gate="G$1" pin="IN_VCC" pad="P$4"/>
+<connect gate="G$1" pin="OUT+1" pad="P$5"/>
+<connect gate="G$1" pin="OUT+2" pad="P$6"/>
+<connect gate="G$1" pin="OUT+3" pad="P$7"/>
+<connect gate="G$1" pin="OUT-1" pad="P$8"/>
+<connect gate="G$1" pin="OUT-2" pad="P$9"/>
+<connect gate="G$1" pin="OUT-3" pad="P$10"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FUENTE_12V">
+<gates>
+<gate name="G$1" symbol="FUENTE_12V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FUENTE_12V">
+<connects>
+<connect gate="G$1" pin="IN_+48V" pad="P$1"/>
+<connect gate="G$1" pin="IN_GND" pad="P$2"/>
+<connect gate="G$1" pin="OUT_+12V" pad="P$3"/>
+<connect gate="G$1" pin="OUT_GND" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FUENTE_24V">
+<gates>
+<gate name="G$1" symbol="FUENTE_24V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FUENTE_24V">
+<connects>
+<connect gate="G$1" pin="IN_+48V" pad="P$1"/>
+<connect gate="G$1" pin="IN_GND" pad="P$2"/>
+<connect gate="G$1" pin="OUT1_+24V" pad="P$3"/>
+<connect gate="G$1" pin="OUT1_GND" pad="P$4"/>
+<connect gate="G$1" pin="OUT2_+24V" pad="P$5"/>
+<connect gate="G$1" pin="OUT2_GND" pad="P$6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GPS">
+<gates>
+<gate name="G$1" symbol="GPS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GPS">
+<connects>
+<connect gate="G$1" pin="ANTENA" pad="P$1"/>
+<connect gate="G$1" pin="IN_12V" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PHIDGETS_ENCODER">
+<gates>
+<gate name="G$1" symbol="PHIDGETS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PHIDGETS">
+<connects>
+<connect gate="G$1" pin="E0_5V" pad="P$9"/>
+<connect gate="G$1" pin="E0_A" pad="P$10"/>
+<connect gate="G$1" pin="E0_B" pad="P$8"/>
+<connect gate="G$1" pin="E0_GND" pad="P$12"/>
+<connect gate="G$1" pin="E0_INDEX" pad="P$11"/>
+<connect gate="G$1" pin="E1_5V" pad="P$14"/>
+<connect gate="G$1" pin="E1_A" pad="P$15"/>
+<connect gate="G$1" pin="E1_B" pad="P$13"/>
+<connect gate="G$1" pin="E1_GND" pad="P$17"/>
+<connect gate="G$1" pin="E1_INDEX" pad="P$16"/>
+<connect gate="G$1" pin="E2_5V" pad="P$19"/>
+<connect gate="G$1" pin="E2_A" pad="P$20"/>
+<connect gate="G$1" pin="E2_B" pad="P$18"/>
+<connect gate="G$1" pin="E2_GND" pad="P$22"/>
+<connect gate="G$1" pin="E2_INDEX" pad="P$21"/>
+<connect gate="G$1" pin="E3_5V" pad="P$24"/>
+<connect gate="G$1" pin="E3_A" pad="P$25"/>
+<connect gate="G$1" pin="E3_B" pad="P$23"/>
+<connect gate="G$1" pin="E3_GND" pad="P$27"/>
+<connect gate="G$1" pin="E3_INDEX" pad="P$26"/>
+<connect gate="G$1" pin="IN_0" pad="P$6"/>
+<connect gate="G$1" pin="IN_1" pad="P$5"/>
+<connect gate="G$1" pin="IN_2" pad="P$4"/>
+<connect gate="G$1" pin="IN_3" pad="P$3"/>
+<connect gate="G$1" pin="IN_5V" pad="P$7"/>
+<connect gate="G$1" pin="IN_GND" pad="P$2"/>
+<connect gate="G$1" pin="USB" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PC">
+<gates>
+<gate name="G$1" symbol="PC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PC">
+<connects>
+<connect gate="G$1" pin="ETHERNET" pad="P$1"/>
+<connect gate="G$1" pin="FIREWIRE" pad="P$2"/>
+<connect gate="G$1" pin="GND" pad="P$3"/>
+<connect gate="G$1" pin="USB1" pad="P$4"/>
+<connect gate="G$1" pin="USB2" pad="P$5"/>
+<connect gate="G$1" pin="USB3" pad="P$6"/>
+<connect gate="G$1" pin="USB4" pad="P$7"/>
+<connect gate="G$1" pin="VCC" pad="P$8"/>
+<connect gate="G$1" pin="VGA" pad="P$9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ENCODER_YUMO">
+<gates>
+<gate name="G$1" symbol="ENCODER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ENCODER">
+<connects>
+<connect gate="G$1" pin="5-12V" pad="P$1"/>
+<connect gate="G$1" pin="COMMON" pad="P$2"/>
+<connect gate="G$1" pin="GND" pad="P$3"/>
+<connect gate="G$1" pin="OUT_A" pad="P$4"/>
+<connect gate="G$1" pin="OUT_B" pad="P$5"/>
+<connect gate="G$1" pin="OUT_Z" pad="P$6"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -634,6 +1056,10 @@
 <part name="U$5" library="ecar" deviceset="VOLTIMETRO" device=""/>
 <part name="U$6" library="ecar" deviceset="VOLTIMETRO" device=""/>
 <part name="U$7" library="ecar" deviceset="CURTIS" device=""/>
+<part name="U$17" library="ecar" deviceset="AMPERIMETRO" device=""/>
+<part name="U$18" library="ecar" deviceset="AMPERIMETRO" device=""/>
+<part name="U$19" library="ecar" deviceset="AMPERIMETRO" device=""/>
+<part name="U$20" library="ecar" deviceset="AMPERIMETRO" device=""/>
 <part name="U$8" library="ecar" deviceset="BATERIA" device=""/>
 <part name="U$9" library="ecar" deviceset="BATERIA" device=""/>
 <part name="U$10" library="ecar" deviceset="BATERIA" device=""/>
@@ -642,35 +1068,47 @@
 <part name="U$13" library="ecar" deviceset="BATERIA" device=""/>
 <part name="U$14" library="ecar" deviceset="BATERIA" device=""/>
 <part name="U$15" library="ecar" deviceset="BATERIA" device=""/>
-<part name="U$17" library="ecar" deviceset="AMPERIMETRO" device=""/>
-<part name="U$18" library="ecar" deviceset="AMPERIMETRO" device=""/>
-<part name="U$19" library="ecar" deviceset="AMPERIMETRO" device=""/>
-<part name="U$20" library="ecar" deviceset="AMPERIMETRO" device=""/>
+<part name="U$21" library="ecar" deviceset="POWERBOX" device=""/>
+<part name="U$22" library="ecar" deviceset="FUENTE_12V" device=""/>
+<part name="U$23" library="ecar" deviceset="FUENTE_24V" device=""/>
+<part name="U$24" library="ecar" deviceset="GPS" device=""/>
+<part name="U$25" library="ecar" deviceset="PHIDGETS_ENCODER" device=""/>
+<part name="U$16" library="ecar" deviceset="PC" device=""/>
+<part name="U$26" library="ecar" deviceset="ENCODER_YUMO" device=""/>
+<part name="U$27" library="ecar" deviceset="ENCODER_YUMO" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="662.94" y="276.86" rot="R90"/>
-<instance part="U$2" gate="G$1" x="165.1" y="187.96"/>
-<instance part="U$3" gate="G$1" x="629.92" y="68.58" rot="R180"/>
-<instance part="U$4" gate="G$1" x="215.9" y="215.9"/>
-<instance part="U$5" gate="G$1" x="231.14" y="215.9"/>
-<instance part="U$6" gate="G$1" x="246.38" y="215.9"/>
-<instance part="U$7" gate="G$1" x="525.78" y="88.9" rot="R180"/>
-<instance part="U$8" gate="G$1" x="213.36" y="175.26" rot="R90"/>
-<instance part="U$9" gate="G$1" x="213.36" y="154.94" rot="R90"/>
-<instance part="U$10" gate="G$1" x="213.36" y="137.16" rot="R90"/>
-<instance part="U$11" gate="G$1" x="213.36" y="119.38" rot="R90"/>
-<instance part="U$12" gate="G$1" x="213.36" y="99.06" rot="R90"/>
-<instance part="U$13" gate="G$1" x="213.36" y="78.74" rot="R90"/>
-<instance part="U$14" gate="G$1" x="213.36" y="58.42" rot="R90"/>
-<instance part="U$15" gate="G$1" x="213.36" y="40.64" rot="R90"/>
-<instance part="U$17" gate="G$1" x="563.88" y="-22.86" rot="R90"/>
-<instance part="U$18" gate="G$1" x="561.34" y="2.54" rot="R90"/>
-<instance part="U$19" gate="G$1" x="596.9" y="0" rot="R90"/>
-<instance part="U$20" gate="G$1" x="599.44" y="-22.86" rot="R90"/>
+<instance part="U$1" gate="G$1" x="1300.48" y="474.98" rot="R90"/>
+<instance part="U$2" gate="G$1" x="152.4" y="535.94"/>
+<instance part="U$3" gate="G$1" x="1320.8" y="165.1" rot="R180"/>
+<instance part="U$4" gate="G$1" x="187.96" y="546.1"/>
+<instance part="U$5" gate="G$1" x="205.74" y="546.1"/>
+<instance part="U$6" gate="G$1" x="223.52" y="546.1"/>
+<instance part="U$7" gate="G$1" x="1247.14" y="342.9" rot="R180"/>
+<instance part="U$17" gate="G$1" x="1325.88" y="-5.08" rot="R90"/>
+<instance part="U$18" gate="G$1" x="1280.16" y="45.72" rot="R90"/>
+<instance part="U$19" gate="G$1" x="1330.96" y="45.72" rot="R90"/>
+<instance part="U$20" gate="G$1" x="1277.62" y="7.62" rot="R90"/>
+<instance part="U$8" gate="G$1" x="789.94" y="391.16" rot="R90"/>
+<instance part="U$9" gate="G$1" x="792.48" y="251.46" rot="R90"/>
+<instance part="U$10" gate="G$1" x="1013.46" y="251.46" rot="R90"/>
+<instance part="U$11" gate="G$1" x="1016" y="109.22" rot="R90"/>
+<instance part="U$12" gate="G$1" x="601.98" y="248.92" rot="R90"/>
+<instance part="U$13" gate="G$1" x="1010.92" y="391.16" rot="R90"/>
+<instance part="U$14" gate="G$1" x="599.44" y="391.16" rot="R90"/>
+<instance part="U$15" gate="G$1" x="1010.92" y="525.78" rot="R90"/>
+<instance part="U$21" gate="G$1" x="165.1" y="508" rot="R270"/>
+<instance part="U$22" gate="G$1" x="0" y="497.84" rot="R270"/>
+<instance part="U$23" gate="G$1" x="335.28" y="574.04" rot="R180"/>
+<instance part="U$24" gate="G$1" x="73.66" y="307.34" rot="R270"/>
+<instance part="U$25" gate="G$1" x="251.46" y="180.34" rot="R90"/>
+<instance part="U$16" gate="G$1" x="7.62" y="5.08"/>
+<instance part="U$26" gate="G$1" x="198.12" y="632.46"/>
+<instance part="U$27" gate="G$1" x="238.76" y="-40.64" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -680,4 +1118,10 @@
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

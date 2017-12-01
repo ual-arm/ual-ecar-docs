@@ -254,14 +254,6 @@
 <pad name="P$5" x="1.27" y="5.08" drill="0.6" shape="octagon"/>
 <pad name="P$6" x="1.27" y="6.35" drill="0.6" shape="octagon"/>
 </package>
-<package name="GPS">
-<wire x1="0" y1="0" x2="0" y2="17.78" width="0.127" layer="21"/>
-<wire x1="0" y1="17.78" x2="15.24" y2="17.78" width="0.127" layer="21"/>
-<wire x1="15.24" y1="17.78" x2="15.24" y2="0" width="0.127" layer="21"/>
-<wire x1="15.24" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<pad name="P$1" x="2.54" y="17.78" drill="0.6"/>
-<pad name="P$2" x="11.43" y="17.78" drill="0.6" shape="offset" rot="R90"/>
-</package>
 <package name="PHIDGETS">
 <wire x1="0" y1="0" x2="31.75" y2="0" width="0.127" layer="21"/>
 <wire x1="31.75" y1="0" x2="31.75" y2="29.21" width="0.127" layer="21"/>
@@ -478,6 +470,15 @@
 <vertex x="29.21" y="0"/>
 </polygon>
 </package>
+<package name="GPS">
+<wire x1="0" y1="0" x2="0" y2="17.78" width="0.127" layer="21"/>
+<wire x1="0" y1="17.78" x2="15.24" y2="17.78" width="0.127" layer="21"/>
+<wire x1="15.24" y1="17.78" x2="15.24" y2="0" width="0.127" layer="21"/>
+<wire x1="15.24" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="2.54" y="17.78" drill="0.6"/>
+<pad name="P$2" x="11.43" y="17.78" drill="0.6" shape="offset" rot="R90"/>
+<pad name="P$3" x="10.16" y="17.78" drill="0.6" shape="square"/>
+</package>
 </packages>
 <symbols>
 <symbol name="DAQ">
@@ -663,28 +664,6 @@
         24V</text>
 <pin name="OUT2_GND" x="43.18" y="132.08" rot="R270"/>
 <pin name="OUT2_+24V" x="35.56" y="132.08" rot="R270"/>
-</symbol>
-<symbol name="GPS">
-<wire x1="0" y1="0" x2="60.96" y2="0" width="0.254" layer="94"/>
-<wire x1="60.96" y1="0" x2="60.96" y2="101.6" width="0.254" layer="94"/>
-<wire x1="60.96" y1="101.6" x2="0" y2="101.6" width="0.254" layer="94"/>
-<wire x1="0" y1="101.6" x2="0" y2="0" width="0.254" layer="94"/>
-<pin name="ANTENA" x="10.16" y="104.14" length="short" rot="R270"/>
-<pin name="IN_12V" x="48.26" y="109.22" rot="R270"/>
-<rectangle x1="50.8" y1="101.6" x2="55.88" y2="104.14" layer="94"/>
-<polygon width="0.254" layer="94">
-<vertex x="7.62" y="91.44"/>
-<vertex x="53.34" y="91.44"/>
-<vertex x="53.34" y="63.5"/>
-<vertex x="7.62" y="63.5"/>
-</polygon>
-<polygon width="0.254" layer="94">
-<vertex x="10.16" y="88.9"/>
-<vertex x="10.16" y="66.04"/>
-<vertex x="50.8" y="66.04"/>
-<vertex x="50.8" y="88.9"/>
-</polygon>
-<text x="5.08" y="25.4" size="20" layer="94">GPS</text>
 </symbol>
 <symbol name="PHIDGETS">
 <wire x1="0" y1="0" x2="63.5" y2="0" width="0.254" layer="94"/>
@@ -1015,6 +994,29 @@ Potencia 4.3 kW</text>
 <text x="7.62" y="20.32" size="1.778" layer="94">   Pololu high-power
 Motor Driver 36v20CS</text>
 </symbol>
+<symbol name="GPS">
+<wire x1="0" y1="0" x2="60.96" y2="0" width="0.254" layer="94"/>
+<wire x1="60.96" y1="0" x2="60.96" y2="101.6" width="0.254" layer="94"/>
+<wire x1="60.96" y1="101.6" x2="0" y2="101.6" width="0.254" layer="94"/>
+<wire x1="0" y1="101.6" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="ANTENA" x="10.16" y="104.14" length="short" rot="R270"/>
+<pin name="IN_12V" x="48.26" y="109.22" rot="R270"/>
+<rectangle x1="50.8" y1="101.6" x2="55.88" y2="104.14" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="7.62" y="91.44"/>
+<vertex x="53.34" y="91.44"/>
+<vertex x="53.34" y="63.5"/>
+<vertex x="7.62" y="63.5"/>
+</polygon>
+<polygon width="0.254" layer="94">
+<vertex x="10.16" y="88.9"/>
+<vertex x="10.16" y="66.04"/>
+<vertex x="50.8" y="66.04"/>
+<vertex x="50.8" y="88.9"/>
+</polygon>
+<text x="5.08" y="25.4" size="20" layer="94">GPS</text>
+<pin name="IN_GND" x="43.18" y="109.22" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DAQ_NI">
@@ -1233,22 +1235,6 @@ Motor Driver 36v20CS</text>
 <connect gate="G$1" pin="OUT1_GND" pad="P$4"/>
 <connect gate="G$1" pin="OUT2_+24V" pad="P$5"/>
 <connect gate="G$1" pin="OUT2_GND" pad="P$6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="GPS">
-<gates>
-<gate name="G$1" symbol="GPS" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="GPS">
-<connects>
-<connect gate="G$1" pin="ANTENA" pad="P$1"/>
-<connect gate="G$1" pin="IN_12V" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1545,6 +1531,23 @@ Motor Driver 36v20CS</text>
 </device>
 </devices>
 </deviceset>
+<deviceset name="GPS">
+<gates>
+<gate name="G$1" symbol="GPS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GPS">
+<connects>
+<connect gate="G$1" pin="ANTENA" pad="P$1"/>
+<connect gate="G$1" pin="IN_12V" pad="P$2"/>
+<connect gate="G$1" pin="IN_GND" pad="P$3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -1577,7 +1580,6 @@ Motor Driver 36v20CS</text>
 <part name="U$21" library="ecar" deviceset="POWERBOX" device=""/>
 <part name="U$22" library="ecar" deviceset="FUENTE_12V" device=""/>
 <part name="U$23" library="ecar" deviceset="FUENTE_24V" device=""/>
-<part name="U$24" library="ecar" deviceset="GPS" device=""/>
 <part name="U$25" library="ecar" deviceset="PHIDGETS_ENCODER" device=""/>
 <part name="U$16" library="ecar" deviceset="PC" device=""/>
 <part name="U$26" library="ecar" deviceset="ENCODER_YUMO" device=""/>
@@ -1591,6 +1593,7 @@ Motor Driver 36v20CS</text>
 <part name="U$33" library="ecar" deviceset="CONVERSOR_ARDUINO" device=""/>
 <part name="U$34" library="ecar" deviceset="POLOLU_HIGH-POWER_MOTOR_DRIVER" device=""/>
 <part name="U$35" library="ecar" deviceset="AMPERIMETRO" device=""/>
+<part name="U$17" library="ecar" deviceset="GPS" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1615,6 +1618,8 @@ Motor Driver 36v20CS</text>
 <text x="195.58" y="363.22" size="3.81" layer="94" rot="R90">A Ordenador</text>
 <text x="223.52" y="401.32" size="3.81" layer="94" rot="R90">A DC-DC 24V</text>
 <text x="195.58" y="398.78" size="3.81" layer="94" rot="R90">A DC-DC 12V</text>
+<text x="-299.72" y="563.88" size="25.4" layer="97">MALETERO 
+  ECARM</text>
 </plain>
 <instances>
 <instance part="U$2" gate="G$1" x="38.1" y="535.94"/>
@@ -1635,9 +1640,8 @@ Motor Driver 36v20CS</text>
 <instance part="U$14" gate="G$1" x="647.7" y="391.16" rot="R90"/>
 <instance part="U$15" gate="G$1" x="1010.92" y="525.78" rot="R90"/>
 <instance part="U$21" gate="G$1" x="182.88" y="441.96" rot="R270"/>
-<instance part="U$22" gate="G$1" x="-88.9" y="510.54" rot="R270"/>
+<instance part="U$22" gate="G$1" x="-91.44" y="492.76" rot="R270"/>
 <instance part="U$23" gate="G$1" x="261.62" y="599.44" rot="R180"/>
-<instance part="U$24" gate="G$1" x="-17.78" y="314.96" rot="R270"/>
 <instance part="U$25" gate="G$1" x="261.62" y="180.34" rot="R90"/>
 <instance part="U$16" gate="G$1" x="7.62" y="5.08"/>
 <instance part="U$26" gate="G$1" x="180.34" y="688.34"/>
@@ -1651,6 +1655,7 @@ Motor Driver 36v20CS</text>
 <instance part="U$33" gate="G$1" x="1252.22" y="502.92" rot="R180"/>
 <instance part="U$34" gate="G$1" x="1097.28" y="497.84"/>
 <instance part="U$35" gate="G$1" x="797.56" y="104.14"/>
+<instance part="U$17" gate="G$1" x="-68.58" y="419.1" rot="R270"/>
 </instances>
 <busses>
 <bus name="CONJUNTO_CABLES_BATERIAS">
@@ -1667,9 +1672,9 @@ Motor Driver 36v20CS</text>
 <wire x1="1023.62" y1="127" x2="1021.08" y2="124.46" width="0.762" layer="92"/>
 <wire x1="1021.08" y1="124.46" x2="462.28" y2="124.46" width="0.762" layer="92"/>
 <wire x1="462.28" y1="124.46" x2="436.88" y2="149.86" width="0.762" layer="92"/>
-<wire x1="436.88" y1="149.86" x2="436.88" y2="276.86" width="0.762" layer="92"/>
-<wire x1="436.88" y1="276.86" x2="299.72" y2="276.86" width="0.762" layer="92"/>
-<wire x1="299.72" y1="276.86" x2="299.72" y2="30.48" width="0.762" layer="92"/>
+<wire x1="436.88" y1="149.86" x2="436.88" y2="269.24" width="0.762" layer="92"/>
+<wire x1="436.88" y1="269.24" x2="299.72" y2="269.24" width="0.762" layer="92"/>
+<wire x1="299.72" y1="269.24" x2="299.72" y2="30.48" width="0.762" layer="92"/>
 <label x="807.72" y="495.3" size="1.778" layer="95" rot="R90"/>
 <label x="673.1" y="421.64" size="1.778" layer="95"/>
 <label x="495.3" y="421.64" size="1.778" layer="95"/>
@@ -1682,7 +1687,7 @@ Motor Driver 36v20CS</text>
 <label x="495.3" y="127" size="1.778" layer="95"/>
 <label x="441.96" y="182.88" size="1.778" layer="95" rot="R90"/>
 <label x="441.96" y="243.84" size="1.778" layer="95" rot="R90"/>
-<label x="299.72" y="276.86" size="1.778" layer="95"/>
+<label x="335.28" y="266.7" size="1.778" layer="95"/>
 <label x="297.18" y="160.02" size="1.778" layer="95" rot="R90"/>
 <label x="297.18" y="33.02" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -1691,16 +1696,26 @@ Motor Driver 36v20CS</text>
 <segment>
 <wire x1="835.66" y1="55.88" x2="477.52" y2="55.88" width="0.762" layer="92"/>
 <wire x1="477.52" y1="55.88" x2="424.18" y2="111.76" width="0.762" layer="92"/>
-<wire x1="424.18" y1="111.76" x2="424.18" y2="284.48" width="0.762" layer="92"/>
-<wire x1="424.18" y1="284.48" x2="421.64" y2="287.02" width="0.762" layer="92"/>
-<wire x1="421.64" y1="287.02" x2="368.3" y2="287.02" width="0.762" layer="92"/>
-<wire x1="368.3" y1="287.02" x2="368.3" y2="431.8" width="0.762" layer="92"/>
+<wire x1="424.18" y1="111.76" x2="424.18" y2="297.18" width="0.762" layer="92"/>
+<wire x1="424.18" y1="297.18" x2="421.64" y2="299.72" width="0.762" layer="92"/>
+<wire x1="421.64" y1="299.72" x2="370.84" y2="299.72" width="0.762" layer="92"/>
 <label x="777.24" y="58.42" size="1.778" layer="95"/>
-<label x="365.76" y="365.76" size="1.778" layer="95" rot="R90"/>
 <label x="543.56" y="58.42" size="1.778" layer="95"/>
 <label x="421.64" y="114.3" size="1.778" layer="95" rot="R90"/>
 <label x="421.64" y="233.68" size="1.778" layer="95" rot="R90"/>
-<label x="391.16" y="289.56" size="1.778" layer="95"/>
+<label x="421.64" y="297.18" size="1.778" layer="95" rot="R180"/>
+<wire x1="370.84" y1="299.72" x2="368.3" y2="302.26" width="0.762" layer="92"/>
+<label x="368.3" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="368.3" y1="302.26" x2="368.3" y2="632.46" width="0.762" layer="92"/>
+<label x="368.3" y="421.64" size="1.778" layer="95" rot="R90"/>
+<wire x1="368.3" y1="632.46" x2="363.22" y2="637.54" width="0.762" layer="92"/>
+<wire x1="363.22" y1="637.54" x2="50.8" y2="637.54" width="0.762" layer="92"/>
+<label x="368.3" y="533.4" size="1.778" layer="95" rot="R90"/>
+<label x="347.98" y="637.54" size="1.778" layer="95"/>
+<label x="111.76" y="637.54" size="1.778" layer="95"/>
+<wire x1="50.8" y1="637.54" x2="45.72" y2="632.46" width="0.762" layer="92"/>
+<wire x1="45.72" y1="632.46" x2="45.72" y2="551.18" width="0.762" layer="92"/>
+<label x="45.72" y="551.18" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
 <bus name="ENC_L">
@@ -1715,11 +1730,11 @@ Motor Driver 36v20CS</text>
 <wire x1="193.04" y1="256.54" x2="175.26" y2="238.76" width="0.762" layer="92"/>
 <wire x1="175.26" y1="238.76" x2="175.26" y2="226.06" width="0.762" layer="92"/>
 <label x="363.22" y="256.54" size="1.778" layer="95"/>
-<label x="274.32" y="259.08" size="1.778" layer="95"/>
+<label x="276.86" y="256.54" size="1.778" layer="95"/>
 <label x="172.72" y="228.6" size="1.778" layer="95" rot="R90"/>
-<label x="383.54" y="292.1" size="1.778" layer="95" rot="R90"/>
-<label x="383.54" y="408.94" size="1.778" layer="95" rot="R90"/>
-<label x="383.54" y="520.7" size="1.778" layer="95" rot="R90"/>
+<label x="386.08" y="307.34" size="1.778" layer="95" rot="R90"/>
+<label x="386.08" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="386.08" y="525.78" size="1.778" layer="95" rot="R90"/>
 <label x="383.54" y="629.92" size="1.778" layer="95" rot="R90"/>
 <label x="304.8" y="655.32" size="1.778" layer="95"/>
 <label x="213.36" y="655.32" size="1.778" layer="95"/>
@@ -1743,10 +1758,62 @@ Motor Driver 36v20CS</text>
 <label x="363.22" y="-68.58" size="1.778" layer="95"/>
 <label x="388.62" y="223.52" size="1.778" layer="95" rot="R90"/>
 <label x="363.22" y="251.46" size="1.778" layer="95"/>
-<label x="274.32" y="246.38" size="1.778" layer="95"/>
+<label x="276.86" y="248.92" size="1.778" layer="95"/>
 <label x="172.72" y="213.36" size="1.778" layer="95" rot="R90"/>
 <label x="388.62" y="109.22" size="1.778" layer="95" rot="R90"/>
 <label x="388.62" y="-5.08" size="1.778" layer="95" rot="R90"/>
+</segment>
+</bus>
+<bus name="MANGUERA_2">
+<segment>
+<wire x1="373.38" y1="302.26" x2="408.94" y2="302.26" width="0.762" layer="92"/>
+<wire x1="408.94" y1="302.26" x2="411.48" y2="304.8" width="0.762" layer="92"/>
+<wire x1="373.38" y1="302.26" x2="370.84" y2="304.8" width="0.762" layer="92"/>
+<label x="411.48" y="307.34" size="1.778" layer="95" rot="R90"/>
+<label x="370.84" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="411.48" y1="304.8" x2="411.48" y2="505.46" width="0.762" layer="92"/>
+<wire x1="411.48" y1="505.46" x2="485.14" y2="579.12" width="0.762" layer="92"/>
+<wire x1="485.14" y1="579.12" x2="995.68" y2="579.12" width="0.762" layer="92"/>
+<label x="411.48" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="579.12" size="1.778" layer="95"/>
+<label x="716.28" y="579.12" size="1.778" layer="95"/>
+<label x="944.88" y="579.12" size="1.778" layer="95"/>
+<wire x1="370.84" y1="304.8" x2="370.84" y2="635" width="0.762" layer="92"/>
+<label x="370.84" y="421.64" size="1.778" layer="95" rot="R90"/>
+<wire x1="370.84" y1="635" x2="365.76" y2="640.08" width="0.762" layer="92"/>
+<wire x1="365.76" y1="640.08" x2="58.42" y2="640.08" width="0.762" layer="92"/>
+<label x="370.84" y="533.4" size="1.778" layer="95" rot="R90"/>
+<label x="347.98" y="640.08" size="1.778" layer="95"/>
+<wire x1="58.42" y1="640.08" x2="48.26" y2="629.92" width="0.762" layer="92"/>
+<wire x1="48.26" y1="629.92" x2="48.26" y2="551.18" width="0.762" layer="92"/>
+<label x="111.76" y="640.08" size="1.778" layer="95"/>
+<label x="48.26" y="551.18" size="1.778" layer="95" rot="R90"/>
+</segment>
+</bus>
+<bus name="MANGUERA_1">
+<segment>
+<wire x1="375.92" y1="304.8" x2="406.4" y2="304.8" width="0.762" layer="92"/>
+<wire x1="406.4" y1="304.8" x2="408.94" y2="307.34" width="0.762" layer="92"/>
+<wire x1="375.92" y1="304.8" x2="373.38" y2="307.34" width="0.762" layer="92"/>
+<label x="408.94" y="307.34" size="1.778" layer="95" rot="R90"/>
+<label x="373.38" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="408.94" y1="307.34" x2="408.94" y2="508" width="0.762" layer="92"/>
+<wire x1="408.94" y1="508" x2="482.6" y2="581.66" width="0.762" layer="92"/>
+<wire x1="482.6" y1="581.66" x2="995.68" y2="581.66" width="0.762" layer="92"/>
+<label x="408.94" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="581.66" size="1.778" layer="95"/>
+<label x="716.28" y="581.66" size="1.778" layer="95"/>
+<label x="944.88" y="581.66" size="1.778" layer="95"/>
+<wire x1="373.38" y1="307.34" x2="373.38" y2="637.54" width="0.762" layer="92"/>
+<wire x1="373.38" y1="637.54" x2="368.3" y2="642.62" width="0.762" layer="92"/>
+<label x="373.38" y="421.64" size="1.778" layer="95" rot="R90"/>
+<wire x1="368.3" y1="642.62" x2="66.04" y2="642.62" width="0.762" layer="92"/>
+<label x="373.38" y="533.4" size="1.778" layer="95" rot="R90"/>
+<label x="347.98" y="642.62" size="1.778" layer="95"/>
+<wire x1="66.04" y1="642.62" x2="50.8" y2="627.38" width="0.762" layer="92"/>
+<wire x1="50.8" y1="627.38" x2="50.8" y2="551.18" width="0.762" layer="92"/>
+<label x="111.76" y="642.62" size="1.778" layer="95"/>
+<label x="50.8" y="551.18" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
 </busses>
@@ -1794,11 +1861,26 @@ Motor Driver 36v20CS</text>
 <wire x1="497.84" y1="261.62" x2="464.82" y2="261.62" width="0.508" layer="91"/>
 <wire x1="464.82" y1="261.62" x2="444.5" y2="279.4" width="0.508" layer="91"/>
 <junction x="497.84" y="261.62"/>
-<wire x1="444.5" y1="279.4" x2="241.3" y2="279.4" width="0.508" layer="91"/>
+<wire x1="444.5" y1="279.4" x2="243.84" y2="279.4" width="0.508" layer="91"/>
 <label x="243.84" y="279.4" size="1.778" layer="95"/>
 <pinref part="U$21" gate="G$1" pin="IN_VCC"/>
-<wire x1="241.3" y1="279.4" x2="228.6" y2="294.64" width="0.508" layer="91"/>
-<label x="393.7" y="279.4" size="1.778" layer="95"/>
+<wire x1="243.84" y1="279.4" x2="231.14" y2="292.1" width="0.508" layer="91"/>
+<label x="388.62" y="279.4" size="1.778" layer="95"/>
+<wire x1="231.14" y1="292.1" x2="228.6" y2="294.64" width="0.508" layer="91"/>
+<wire x1="231.14" y1="292.1" x2="152.4" y2="292.1" width="0.508" layer="91"/>
+<wire x1="152.4" y1="292.1" x2="144.78" y2="299.72" width="0.508" layer="91"/>
+<junction x="231.14" y="292.1"/>
+<wire x1="144.78" y1="299.72" x2="144.78" y2="518.16" width="0.508" layer="91"/>
+<wire x1="144.78" y1="518.16" x2="139.7" y2="523.24" width="0.508" layer="91"/>
+<wire x1="139.7" y1="523.24" x2="109.22" y2="523.24" width="0.508" layer="91"/>
+<wire x1="109.22" y1="523.24" x2="104.14" y2="528.32" width="0.508" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="V+"/>
+<wire x1="104.14" y1="528.32" x2="104.14" y2="563.88" width="0.508" layer="91"/>
+<label x="152.4" y="292.1" size="1.778" layer="95"/>
+<label x="144.78" y="383.54" size="1.778" layer="95" rot="R90"/>
+<label x="144.78" y="490.22" size="1.778" layer="95" rot="R90"/>
+<label x="127" y="523.24" size="1.778" layer="95"/>
+<label x="104.14" y="553.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="BAT_6+" class="0">
@@ -1874,19 +1956,33 @@ Motor Driver 36v20CS</text>
 <wire x1="792.48" y1="119.38" x2="459.74" y2="119.38" width="0.508" layer="91"/>
 <wire x1="459.74" y1="119.38" x2="431.8" y2="147.32" width="0.508" layer="91"/>
 <junction x="792.48" y="119.38"/>
-<wire x1="431.8" y1="147.32" x2="431.8" y2="271.78" width="0.508" layer="91"/>
-<wire x1="431.8" y1="271.78" x2="429.26" y2="274.32" width="0.508" layer="91"/>
-<wire x1="429.26" y1="274.32" x2="231.14" y2="274.32" width="0.508" layer="91"/>
-<label x="243.84" y="271.78" size="1.778" layer="95"/>
+<wire x1="431.8" y1="147.32" x2="431.8" y2="274.32" width="0.508" layer="91"/>
+<wire x1="431.8" y1="274.32" x2="429.26" y2="276.86" width="0.508" layer="91"/>
+<wire x1="429.26" y1="276.86" x2="228.6" y2="276.86" width="0.508" layer="91"/>
+<label x="243.84" y="276.86" size="1.778" layer="95"/>
 <pinref part="U$35" gate="G$1" pin="IN"/>
 <wire x1="797.56" y1="116.84" x2="795.02" y2="116.84" width="0.508" layer="91"/>
-<wire x1="231.14" y1="274.32" x2="215.9" y2="289.56" width="0.508" layer="91"/>
+<wire x1="228.6" y1="276.86" x2="215.9" y2="289.56" width="0.508" layer="91"/>
 <pinref part="U$21" gate="G$1" pin="IN_GND"/>
 <wire x1="215.9" y1="289.56" x2="215.9" y2="294.64" width="0.508" layer="91"/>
-<label x="393.7" y="271.78" size="1.778" layer="95"/>
+<label x="388.62" y="276.86" size="1.778" layer="95"/>
 <label x="429.26" y="157.48" size="1.778" layer="95" rot="R90"/>
 <label x="495.3" y="114.3" size="1.778" layer="95"/>
 <label x="668.02" y="116.84" size="1.778" layer="95"/>
+<wire x1="215.9" y1="289.56" x2="152.4" y2="289.56" width="0.508" layer="91"/>
+<wire x1="152.4" y1="289.56" x2="142.24" y2="299.72" width="0.508" layer="91"/>
+<junction x="215.9" y="289.56"/>
+<wire x1="142.24" y1="299.72" x2="142.24" y2="523.24" width="0.508" layer="91"/>
+<wire x1="142.24" y1="523.24" x2="139.7" y2="525.78" width="0.508" layer="91"/>
+<wire x1="139.7" y1="525.78" x2="121.92" y2="525.78" width="0.508" layer="91"/>
+<wire x1="121.92" y1="525.78" x2="113.03" y2="534.67" width="0.508" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="V-"/>
+<wire x1="113.03" y1="534.67" x2="113.03" y2="563.88" width="0.508" layer="91"/>
+<label x="152.4" y="289.56" size="1.778" layer="95"/>
+<label x="142.24" y="383.54" size="1.778" layer="95" rot="R90"/>
+<label x="142.24" y="490.22" size="1.778" layer="95" rot="R90"/>
+<label x="127" y="525.78" size="1.778" layer="95"/>
+<label x="111.76" y="553.72" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2134,11 +2230,18 @@ Motor Driver 36v20CS</text>
 <wire x1="172.72" y1="297.18" x2="185.42" y2="284.48" width="0.508" layer="91"/>
 <wire x1="185.42" y1="284.48" x2="388.62" y2="284.48" width="0.508" layer="91"/>
 <wire x1="388.62" y1="284.48" x2="396.24" y2="292.1" width="0.508" layer="91"/>
-<wire x1="396.24" y1="292.1" x2="396.24" y2="332.74" width="0.508" layer="91"/>
 <label x="175.26" y="317.5" size="1.778" layer="95" rot="R90"/>
 <label x="208.28" y="284.48" size="1.778" layer="95"/>
 <label x="340.36" y="284.48" size="1.778" layer="95"/>
-<label x="396.24" y="294.64" size="1.778" layer="95" rot="R90"/>
+<label x="396.24" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="396.24" y1="292.1" x2="396.24" y2="520.7" width="0.508" layer="91"/>
+<wire x1="396.24" y1="520.7" x2="452.12" y2="576.58" width="0.508" layer="91"/>
+<wire x1="452.12" y1="576.58" x2="469.9" y2="594.36" width="0.508" layer="91"/>
+<wire x1="469.9" y1="594.36" x2="995.68" y2="594.36" width="0.508" layer="91"/>
+<label x="396.24" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="594.36" size="1.778" layer="95"/>
+<label x="716.28" y="594.36" size="1.778" layer="95"/>
+<label x="944.88" y="594.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V_VCC" class="0">
@@ -2148,12 +2251,19 @@ Motor Driver 36v20CS</text>
 <wire x1="170.18" y1="332.74" x2="170.18" y2="297.18" width="0.508" layer="91"/>
 <wire x1="170.18" y1="297.18" x2="185.42" y2="281.94" width="0.508" layer="91"/>
 <wire x1="185.42" y1="281.94" x2="391.16" y2="281.94" width="0.508" layer="91"/>
-<wire x1="391.16" y1="281.94" x2="401.32" y2="292.1" width="0.508" layer="91"/>
-<wire x1="401.32" y1="292.1" x2="401.32" y2="332.74" width="0.508" layer="91"/>
+<wire x1="391.16" y1="281.94" x2="398.78" y2="289.56" width="0.508" layer="91"/>
 <label x="170.18" y="317.5" size="1.778" layer="95" rot="R90"/>
 <label x="208.28" y="279.4" size="1.778" layer="95"/>
 <label x="340.36" y="281.94" size="1.778" layer="95"/>
-<label x="401.32" y="294.64" size="1.778" layer="95" rot="R90"/>
+<label x="398.78" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="398.78" y1="289.56" x2="398.78" y2="518.16" width="0.508" layer="91"/>
+<wire x1="398.78" y1="518.16" x2="457.2" y2="576.58" width="0.508" layer="91"/>
+<wire x1="457.2" y1="576.58" x2="472.44" y2="591.82" width="0.508" layer="91"/>
+<wire x1="472.44" y1="591.82" x2="995.68" y2="591.82" width="0.508" layer="91"/>
+<label x="398.78" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="591.82" size="1.778" layer="95"/>
+<label x="716.28" y="591.82" size="1.778" layer="95"/>
+<label x="944.88" y="591.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ORDENADOR_GND" class="0">
@@ -2161,18 +2271,18 @@ Motor Driver 36v20CS</text>
 <pinref part="U$21" gate="G$1" pin="OUT-3"/>
 <wire x1="175.26" y1="373.38" x2="170.18" y2="373.38" width="0.508" layer="91"/>
 <wire x1="170.18" y1="373.38" x2="165.1" y2="368.3" width="0.508" layer="91"/>
-<wire x1="165.1" y1="368.3" x2="165.1" y2="279.4" width="0.508" layer="91"/>
-<wire x1="165.1" y1="279.4" x2="175.26" y2="269.24" width="0.508" layer="91"/>
-<wire x1="175.26" y1="269.24" x2="322.58" y2="269.24" width="0.508" layer="91"/>
-<wire x1="322.58" y1="269.24" x2="330.2" y2="261.62" width="0.508" layer="91"/>
+<wire x1="165.1" y1="368.3" x2="165.1" y2="276.86" width="0.508" layer="91"/>
+<wire x1="165.1" y1="276.86" x2="175.26" y2="266.7" width="0.508" layer="91"/>
+<wire x1="175.26" y1="266.7" x2="325.12" y2="266.7" width="0.508" layer="91"/>
+<wire x1="325.12" y1="266.7" x2="330.2" y2="261.62" width="0.508" layer="91"/>
 <wire x1="330.2" y1="261.62" x2="330.2" y2="40.64" width="0.508" layer="91"/>
 <wire x1="330.2" y1="40.64" x2="312.42" y2="22.86" width="0.508" layer="91"/>
 <pinref part="U$16" gate="G$1" pin="GND"/>
 <wire x1="312.42" y1="22.86" x2="259.08" y2="22.86" width="0.508" layer="91"/>
 <label x="261.62" y="25.4" size="1.778" layer="95"/>
 <label x="170.18" y="350.52" size="1.778" layer="95" rot="R90"/>
-<label x="180.34" y="269.24" size="1.778" layer="95"/>
-<label x="302.26" y="269.24" size="1.778" layer="95"/>
+<label x="180.34" y="266.7" size="1.778" layer="95"/>
+<label x="302.26" y="264.16" size="1.778" layer="95"/>
 <label x="330.2" y="220.98" size="1.778" layer="95" rot="R90"/>
 <label x="330.2" y="91.44" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -2182,20 +2292,227 @@ Motor Driver 36v20CS</text>
 <pinref part="U$21" gate="G$1" pin="OUT+3"/>
 <wire x1="175.26" y1="381" x2="170.18" y2="381" width="0.508" layer="91"/>
 <wire x1="170.18" y1="381" x2="160.02" y2="370.84" width="0.508" layer="91"/>
-<wire x1="160.02" y1="370.84" x2="160.02" y2="279.4" width="0.508" layer="91"/>
-<wire x1="160.02" y1="279.4" x2="175.26" y2="264.16" width="0.508" layer="91"/>
-<wire x1="175.26" y1="264.16" x2="320.04" y2="264.16" width="0.508" layer="91"/>
-<wire x1="320.04" y1="264.16" x2="325.12" y2="259.08" width="0.508" layer="91"/>
+<wire x1="160.02" y1="370.84" x2="160.02" y2="276.86" width="0.508" layer="91"/>
+<wire x1="160.02" y1="276.86" x2="175.26" y2="261.62" width="0.508" layer="91"/>
+<wire x1="175.26" y1="261.62" x2="322.58" y2="261.62" width="0.508" layer="91"/>
+<wire x1="322.58" y1="261.62" x2="325.12" y2="259.08" width="0.508" layer="91"/>
 <wire x1="325.12" y1="259.08" x2="325.12" y2="53.34" width="0.508" layer="91"/>
 <wire x1="325.12" y1="53.34" x2="312.42" y2="40.64" width="0.508" layer="91"/>
 <pinref part="U$16" gate="G$1" pin="VCC"/>
 <wire x1="312.42" y1="40.64" x2="259.08" y2="40.64" width="0.508" layer="91"/>
 <label x="261.62" y="43.18" size="1.778" layer="95"/>
 <label x="157.48" y="350.52" size="1.778" layer="95" rot="R90"/>
-<label x="180.34" y="264.16" size="1.778" layer="95"/>
-<label x="302.26" y="264.16" size="1.778" layer="95"/>
+<label x="180.34" y="261.62" size="1.778" layer="95"/>
+<label x="302.26" y="259.08" size="1.778" layer="95"/>
 <label x="325.12" y="220.98" size="1.778" layer="95" rot="R90"/>
 <label x="325.12" y="91.44" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="+48V-&gt;DC-DC24V" class="0">
+<segment>
+<pinref part="U$21" gate="G$1" pin="OUT+1"/>
+<wire x1="175.26" y1="411.48" x2="170.18" y2="416.56" width="0.508" layer="91"/>
+<wire x1="170.18" y1="416.56" x2="170.18" y2="441.96" width="0.508" layer="91"/>
+<wire x1="170.18" y1="441.96" x2="175.26" y2="447.04" width="0.508" layer="91"/>
+<wire x1="175.26" y1="447.04" x2="251.46" y2="447.04" width="0.508" layer="91"/>
+<wire x1="251.46" y1="447.04" x2="256.54" y2="452.12" width="0.508" layer="91"/>
+<pinref part="U$23" gate="G$1" pin="IN_+48V"/>
+<wire x1="256.54" y1="452.12" x2="256.54" y2="467.36" width="0.508" layer="91"/>
+<label x="198.12" y="444.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND-&gt;DC-DC24V" class="0">
+<segment>
+<pinref part="U$23" gate="G$1" pin="IN_GND"/>
+<wire x1="248.92" y1="467.36" x2="248.92" y2="454.66" width="0.508" layer="91"/>
+<wire x1="248.92" y1="454.66" x2="243.84" y2="449.58" width="0.508" layer="91"/>
+<wire x1="243.84" y1="449.58" x2="175.26" y2="449.58" width="0.508" layer="91"/>
+<wire x1="175.26" y1="449.58" x2="167.64" y2="441.96" width="0.508" layer="91"/>
+<wire x1="167.64" y1="441.96" x2="167.64" y2="408.94" width="0.508" layer="91"/>
+<wire x1="167.64" y1="408.94" x2="172.72" y2="403.86" width="0.508" layer="91"/>
+<pinref part="U$21" gate="G$1" pin="OUT-1"/>
+<wire x1="172.72" y1="403.86" x2="175.26" y2="403.86" width="0.508" layer="91"/>
+<label x="198.12" y="449.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="+48V-&gt;DC-DC12V" class="0">
+<segment>
+<pinref part="U$21" gate="G$1" pin="OUT+2"/>
+<wire x1="175.26" y1="396.24" x2="172.72" y2="396.24" width="0.508" layer="91"/>
+<wire x1="172.72" y1="396.24" x2="160.02" y2="408.94" width="0.508" layer="91"/>
+<wire x1="160.02" y1="408.94" x2="160.02" y2="480.06" width="0.508" layer="91"/>
+<wire x1="160.02" y1="480.06" x2="152.4" y2="487.68" width="0.508" layer="91"/>
+<pinref part="U$22" gate="G$1" pin="IN_+48V"/>
+<wire x1="152.4" y1="487.68" x2="40.64" y2="487.68" width="0.508" layer="91"/>
+<label x="160.02" y="441.96" size="1.778" layer="95" rot="R90"/>
+<label x="81.28" y="487.68" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND-&gt;DC-DC12V" class="0">
+<segment>
+<pinref part="U$22" gate="G$1" pin="IN_GND"/>
+<wire x1="40.64" y1="480.06" x2="147.32" y2="480.06" width="0.508" layer="91"/>
+<wire x1="147.32" y1="480.06" x2="154.94" y2="472.44" width="0.508" layer="91"/>
+<wire x1="154.94" y1="472.44" x2="154.94" y2="403.86" width="0.508" layer="91"/>
+<wire x1="154.94" y1="403.86" x2="170.18" y2="388.62" width="0.508" layer="91"/>
+<pinref part="U$21" gate="G$1" pin="OUT-2"/>
+<wire x1="170.18" y1="388.62" x2="175.26" y2="388.62" width="0.508" layer="91"/>
+<label x="154.94" y="441.96" size="1.778" layer="95" rot="R90"/>
+<label x="81.28" y="480.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VCC_DC-DC24V-&gt;FRONTAL" class="0">
+<segment>
+<pinref part="U$23" gate="G$1" pin="OUT2_+24V"/>
+<wire x1="226.06" y1="467.36" x2="231.14" y2="462.28" width="0.508" layer="91"/>
+<wire x1="231.14" y1="462.28" x2="304.8" y2="462.28" width="0.508" layer="91"/>
+<wire x1="304.8" y1="462.28" x2="309.88" y2="457.2" width="0.508" layer="91"/>
+<wire x1="309.88" y1="457.2" x2="309.88" y2="302.26" width="0.508" layer="91"/>
+<wire x1="309.88" y1="302.26" x2="314.96" y2="297.18" width="0.508" layer="91"/>
+<wire x1="314.96" y1="297.18" x2="388.62" y2="297.18" width="0.508" layer="91"/>
+<wire x1="388.62" y1="297.18" x2="391.16" y2="299.72" width="0.508" layer="91"/>
+<label x="261.62" y="462.28" size="1.778" layer="95"/>
+<label x="309.88" y="388.62" size="1.778" layer="95" rot="R90"/>
+<label x="337.82" y="297.18" size="1.778" layer="95"/>
+<label x="391.16" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="391.16" y1="299.72" x2="391.16" y2="525.78" width="0.508" layer="91"/>
+<wire x1="391.16" y1="525.78" x2="441.96" y2="576.58" width="0.508" layer="91"/>
+<wire x1="441.96" y1="576.58" x2="464.82" y2="599.44" width="0.508" layer="91"/>
+<wire x1="464.82" y1="599.44" x2="995.68" y2="599.44" width="0.508" layer="91"/>
+<label x="391.16" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="599.44" size="1.778" layer="95"/>
+<label x="716.28" y="599.44" size="1.778" layer="95"/>
+<label x="944.88" y="599.44" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND_DC-DC24V-&gt;FRONTAL" class="0">
+<segment>
+<pinref part="U$23" gate="G$1" pin="OUT2_GND"/>
+<wire x1="218.44" y1="467.36" x2="218.44" y2="464.82" width="0.508" layer="91"/>
+<wire x1="218.44" y1="464.82" x2="223.52" y2="459.74" width="0.508" layer="91"/>
+<wire x1="223.52" y1="459.74" x2="302.26" y2="459.74" width="0.508" layer="91"/>
+<wire x1="302.26" y1="459.74" x2="304.8" y2="457.2" width="0.508" layer="91"/>
+<wire x1="304.8" y1="457.2" x2="304.8" y2="299.72" width="0.508" layer="91"/>
+<wire x1="304.8" y1="299.72" x2="312.42" y2="292.1" width="0.508" layer="91"/>
+<wire x1="312.42" y1="292.1" x2="388.62" y2="292.1" width="0.508" layer="91"/>
+<wire x1="388.62" y1="292.1" x2="393.7" y2="297.18" width="0.508" layer="91"/>
+<label x="261.62" y="459.74" size="1.778" layer="95"/>
+<label x="304.8" y="388.62" size="1.778" layer="95" rot="R90"/>
+<label x="337.82" y="292.1" size="1.778" layer="95"/>
+<label x="393.7" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="393.7" y1="297.18" x2="393.7" y2="523.24" width="0.508" layer="91"/>
+<wire x1="393.7" y1="523.24" x2="447.04" y2="576.58" width="0.508" layer="91"/>
+<wire x1="447.04" y1="576.58" x2="467.36" y2="596.9" width="0.508" layer="91"/>
+<wire x1="467.36" y1="596.9" x2="995.68" y2="596.9" width="0.508" layer="91"/>
+<label x="393.7" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="596.9" size="1.778" layer="95"/>
+<label x="716.28" y="596.9" size="1.778" layer="95"/>
+<label x="944.88" y="596.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND_DC-DC12V-&gt;FRONTAL" class="0">
+<segment>
+<pinref part="U$17" gate="G$1" pin="IN_GND"/>
+<wire x1="40.64" y1="375.92" x2="45.72" y2="381" width="0.508" layer="91"/>
+<wire x1="45.72" y1="381" x2="45.72" y2="429.26" width="0.508" layer="91"/>
+<pinref part="U$22" gate="G$1" pin="OUT_GND"/>
+<wire x1="45.72" y1="429.26" x2="40.64" y2="434.34" width="0.508" layer="91"/>
+<wire x1="403.86" y1="281.94" x2="393.7" y2="271.78" width="0.508" layer="91"/>
+<wire x1="393.7" y1="271.78" x2="68.58" y2="271.78" width="0.508" layer="91"/>
+<wire x1="68.58" y1="271.78" x2="58.42" y2="281.94" width="0.508" layer="91"/>
+<wire x1="58.42" y1="281.94" x2="58.42" y2="429.26" width="0.508" layer="91"/>
+<wire x1="58.42" y1="429.26" x2="53.34" y2="434.34" width="0.508" layer="91"/>
+<wire x1="53.34" y1="434.34" x2="40.64" y2="434.34" width="0.508" layer="91"/>
+<junction x="40.64" y="434.34"/>
+<label x="58.42" y="398.78" size="1.778" layer="95" rot="R90"/>
+<label x="58.42" y="284.48" size="1.778" layer="95" rot="R90"/>
+<label x="180.34" y="271.78" size="1.778" layer="95"/>
+<label x="347.98" y="271.78" size="1.778" layer="95"/>
+<label x="403.86" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="403.86" y1="281.94" x2="403.86" y2="513.08" width="0.508" layer="91"/>
+<wire x1="403.86" y1="513.08" x2="467.36" y2="576.58" width="0.508" layer="91"/>
+<wire x1="467.36" y1="576.58" x2="477.52" y2="586.74" width="0.508" layer="91"/>
+<wire x1="477.52" y1="586.74" x2="995.68" y2="586.74" width="0.508" layer="91"/>
+<label x="403.86" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="586.74" size="1.778" layer="95"/>
+<label x="716.28" y="586.74" size="1.778" layer="95"/>
+<label x="944.88" y="586.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VCC_DC-DC12V-&gt;FRONTAL" class="0">
+<segment>
+<pinref part="U$17" gate="G$1" pin="IN_12V"/>
+<wire x1="40.64" y1="370.84" x2="50.8" y2="381" width="0.508" layer="91"/>
+<wire x1="50.8" y1="381" x2="50.8" y2="436.88" width="0.508" layer="91"/>
+<wire x1="50.8" y1="436.88" x2="45.72" y2="441.96" width="0.508" layer="91"/>
+<pinref part="U$22" gate="G$1" pin="OUT_+12V"/>
+<wire x1="45.72" y1="441.96" x2="40.64" y2="441.96" width="0.508" layer="91"/>
+<wire x1="45.72" y1="441.96" x2="58.42" y2="441.96" width="0.508" layer="91"/>
+<wire x1="58.42" y1="441.96" x2="63.5" y2="436.88" width="0.508" layer="91"/>
+<junction x="45.72" y="441.96"/>
+<wire x1="63.5" y1="436.88" x2="63.5" y2="284.48" width="0.508" layer="91"/>
+<wire x1="63.5" y1="284.48" x2="73.66" y2="274.32" width="0.508" layer="91"/>
+<wire x1="73.66" y1="274.32" x2="393.7" y2="274.32" width="0.508" layer="91"/>
+<wire x1="393.7" y1="274.32" x2="401.32" y2="281.94" width="0.508" layer="91"/>
+<label x="63.5" y="398.78" size="1.778" layer="95" rot="R90"/>
+<label x="63.5" y="284.48" size="1.778" layer="95" rot="R90"/>
+<label x="180.34" y="274.32" size="1.778" layer="95"/>
+<label x="347.98" y="274.32" size="1.778" layer="95"/>
+<label x="401.32" y="307.34" size="1.778" layer="95" rot="R90"/>
+<wire x1="401.32" y1="281.94" x2="401.32" y2="515.62" width="0.508" layer="91"/>
+<wire x1="401.32" y1="515.62" x2="462.28" y2="576.58" width="0.508" layer="91"/>
+<wire x1="462.28" y1="576.58" x2="474.98" y2="589.28" width="0.508" layer="91"/>
+<wire x1="474.98" y1="589.28" x2="995.68" y2="589.28" width="0.508" layer="91"/>
+<label x="401.32" y="421.64" size="1.778" layer="95" rot="R90"/>
+<label x="487.68" y="589.28" size="1.778" layer="95"/>
+<label x="716.28" y="589.28" size="1.778" layer="95"/>
+<label x="944.88" y="589.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND_DC-DC24V-&gt;VOLTIMETROS" class="0">
+<segment>
+<pinref part="U$23" gate="G$1" pin="OUT1_GND"/>
+<wire x1="203.2" y1="467.36" x2="187.96" y2="467.36" width="0.508" layer="91"/>
+<wire x1="187.96" y1="467.36" x2="182.88" y2="472.44" width="0.508" layer="91"/>
+<wire x1="182.88" y1="472.44" x2="182.88" y2="591.82" width="0.508" layer="91"/>
+<wire x1="182.88" y1="591.82" x2="180.34" y2="594.36" width="0.508" layer="91"/>
+<wire x1="180.34" y1="594.36" x2="149.86" y2="594.36" width="0.508" layer="91"/>
+<pinref part="U$6" gate="G$1" pin="GND"/>
+<wire x1="149.86" y1="594.36" x2="148.59" y2="593.09" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="594.36" x2="132.08" y2="594.36" width="0.508" layer="91"/>
+<junction x="149.86" y="594.36"/>
+<pinref part="U$5" gate="G$1" pin="GND"/>
+<wire x1="132.08" y1="594.36" x2="130.81" y2="593.09" width="0.508" layer="91"/>
+<wire x1="132.08" y1="594.36" x2="114.3" y2="594.36" width="0.508" layer="91"/>
+<junction x="132.08" y="594.36"/>
+<pinref part="U$4" gate="G$1" pin="GND"/>
+<wire x1="114.3" y1="594.36" x2="113.03" y2="593.09" width="0.508" layer="91"/>
+<label x="182.88" y="480.06" size="1.778" layer="95" rot="R90"/>
+<label x="182.88" y="556.26" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="VCC_DC-DC24V-&gt;VOLTIMETROS" class="0">
+<segment>
+<pinref part="U$23" gate="G$1" pin="OUT1_+24V"/>
+<wire x1="210.82" y1="467.36" x2="208.28" y2="464.82" width="0.508" layer="91"/>
+<wire x1="208.28" y1="464.82" x2="187.96" y2="464.82" width="0.508" layer="91"/>
+<wire x1="187.96" y1="464.82" x2="180.34" y2="472.44" width="0.508" layer="91"/>
+<wire x1="180.34" y1="472.44" x2="180.34" y2="591.82" width="0.508" layer="91"/>
+<wire x1="180.34" y1="591.82" x2="175.26" y2="596.9" width="0.508" layer="91"/>
+<wire x1="175.26" y1="596.9" x2="143.51" y2="596.9" width="0.508" layer="91"/>
+<pinref part="U$6" gate="G$1" pin="VCC"/>
+<wire x1="143.51" y1="596.9" x2="139.7" y2="593.09" width="0.508" layer="91"/>
+<wire x1="143.51" y1="596.9" x2="127" y2="596.9" width="0.508" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="VCC"/>
+<wire x1="127" y1="596.9" x2="123.19" y2="593.09" width="0.508" layer="91"/>
+<wire x1="123.19" y1="593.09" x2="121.92" y2="593.09" width="0.508" layer="91"/>
+<wire x1="127" y1="596.9" x2="109.22" y2="596.9" width="0.508" layer="91"/>
+<junction x="127" y="596.9"/>
+<pinref part="U$4" gate="G$1" pin="VCC"/>
+<wire x1="109.22" y1="596.9" x2="105.41" y2="593.09" width="0.508" layer="91"/>
+<wire x1="105.41" y1="593.09" x2="104.14" y2="593.09" width="0.1524" layer="91"/>
+<label x="180.34" y="480.06" size="1.778" layer="95" rot="R90"/>
+<label x="180.34" y="556.26" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>

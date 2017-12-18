@@ -3445,6 +3445,7 @@ MARRON_VACIO(M2)</text>
 <wire x1="1272.54" y1="363.22" x2="1270" y2="360.68" width="0.508" layer="91"/>
 <pinref part="U$24" gate="G$1" pin="D7"/>
 <wire x1="1270" y1="360.68" x2="1267.46" y2="360.68" width="0.508" layer="91"/>
+<label x="1254.76" y="368.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DIR" class="0">
@@ -3458,6 +3459,7 @@ MARRON_VACIO(M2)</text>
 <wire x1="1275.08" y1="360.68" x2="1272.54" y2="358.14" width="0.508" layer="91"/>
 <pinref part="U$24" gate="G$1" pin="D6"/>
 <wire x1="1272.54" y1="358.14" x2="1267.46" y2="358.14" width="0.508" layer="91"/>
+<label x="1254.76" y="370.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IN1" class="0">

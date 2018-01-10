@@ -23,12 +23,12 @@ q0=Ks*(1+T/(2*Tis));
 q1=Ks*(-1+T/(2*Tis));
 
 % Lazo externo
-taubc_p=0.3;
+taubc_p=0.2;
 
 % Method SIMC PID
 Kp=(1/(taubc_p+tr));
 Tip=4*(taubc_p+tr);
-Tdp=0.2;
+Tdp=0.0; %0.2
 q0p=Kp*(1+T/(2*Tip)+Tdp/T);
 q1p=Kp*(-1+T/(2*Tip)-2*Tdp/T);
 q2p=Kp*Tdp/T;
@@ -42,17 +42,19 @@ qden_cp=[1 -1 0];
 Tf=0;
 num_fp=1-exp(-T/Tf);
 den_fp=[1 -exp(-T/Tf)];
-t_p=12;
-P=2;
+t_p=7;
+P=50;
 %% Simulación
-t=30;
+t  = 25;
 t1 = 2;
 t2 = 10;
 t3 = 15;
-R1 = 50;
-R2 = -30;
-R3 = -40;
-sim('Control');
+t4 = 20;
+R1 = 75;
+R2 = -75;
+R3 = -100;
+R4 = 100;
+sim('Control_rampa');
 %% Gráficas
 % Validación de ensayos con los tres mejores modelos
 lim_inf = 0;
@@ -61,14 +63,14 @@ figure(1)
 subplot(3,1,1)
 plot(Time_d,Out_p_d, Time_d, Ref_p)
 xlim([lim_inf lim_sup])
-title('Posición de la dirección')
+title('Posición del motor')
 ylabel('Posición[º]')
 xlabel('Tiempo [s]')
 legend('Modelo Discreto','Referencia')
 subplot(3,1,2)
 plot(Time_d,Out_s_d,Time_d,Ref_s_d)
 xlim([lim_inf lim_sup])
-title('Velocidad de la dirección')
+title('Velocidad del motor')
 ylabel('Velocidad [º/s]')
 xlabel('Tiempo [s]')
 legend('Modelo Discreto','Referencia')
@@ -79,26 +81,24 @@ xlim([lim_inf lim_sup])
 title('Señal de control PWM')
 ylabel('PWM [-254 +254]')
 xlabel('Tiempo [s]')
-%%
-E1 = 400;
-E2 = -250;
-E3 = -600;
-sim('Control_escalon');
-%% Gráficas Señal de entrada en Escalon
+%% Gráficas Señal de entrada generada
+t  = 75;
+load('Referencia_real.mat');
+sim('Control_referencia');
 lim_inf = 0;
 lim_sup = t;
-figure(2)
+figure(3)
 subplot(3,1,1)
-plot(Time_d,Out_p_d, Time_d, Ref_p, Time_d, Ref_pf)
+plot(Time_d,Out_p_d, Time_d, Ref_p)
 xlim([lim_inf lim_sup])
-title('Posición de la dirección')
+title('Posición del motor')
 ylabel('Posición[º]')
 xlabel('Tiempo [s]')
-legend('Modelo Discreto','Referencia', 'Ref+Filtro')
+legend('Modelo Discreto','Referencia')
 subplot(3,1,2)
 plot(Time_d,Out_s_d,Time_d,Ref_s_d)
 xlim([lim_inf lim_sup])
-title('Velocidad de la dirección')
+title('Velocidad del motor')
 ylabel('Velocidad [º/s]')
 xlabel('Tiempo [s]')
 legend('Modelo Discreto','Referencia')
@@ -109,3 +109,4 @@ xlim([lim_inf lim_sup])
 title('Señal de control PWM')
 ylabel('PWM [-254 +254]')
 xlabel('Tiempo [s]')
+save datos_controlador.mat k qnum_cp qden_cp T tau q0 q1

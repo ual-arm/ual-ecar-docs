@@ -1,12 +1,12 @@
 Model {
-  Name			  "Control_escalon"
+  Name			  "Control_referencia"
   Version		  9.0
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.48"
+    ComputedModelVersion    "1.49"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -103,11 +103,11 @@ Model {
   Creator		  "Francisco José Mañas"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Francisco José Mañas"
+  LastModifiedBy	  "Lab110PC3"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Dec 08 16:13:53 2017"
-  RTWModifiedTimeStamp	  434650430
-  ModelVersionFormat	  "1.%<AutoIncrement:48>"
+  LastModifiedDate	  "Wed Jan 10 13:14:26 2018"
+  RTWModifiedTimeStamp	  437490851
+  ModelVersionFormat	  "1.%<AutoIncrement:49>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -159,12 +159,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "Control_escalon"
+    model_		    "Control_referencia"
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "Control_escalon"
+      Cell		      "Control_referencia"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1035,6 +1035,15 @@ Model {
       RTWStateStorageClass    "Auto"
     }
     Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      OutDataTypeStr	      "Inherit: auto"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
       BlockType		      Gain
       Gain		      "1"
       Multiplication	      "Element-wise(K.*u)"
@@ -1183,7 +1192,7 @@ Model {
     }
   }
   System {
-    Name		    "Control_escalon"
+    Name		    "Control_referencia"
     Location		    [-8, -8, 1928, 1048]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1199,7 +1208,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "177"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "182"
+    SIDHighWatermark	    "183"
     Block {
       BlockType		      Clock
       Name		      "Clock"
@@ -1237,6 +1246,17 @@ Model {
       SampleTime	      "-1"
       ICPrevOutput	      "DiscIntNeverNeededParam"
       ICPrevScaledInput	      "DiscIntNeverNeededParam"
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace"
+      SID		      "183"
+      Position		      [-255, 383, -190, 407]
+      ZOrder		      236
+      ShowName		      off
+      VariableName	      "Referencia_Simulink"
+      SampleTime	      "T"
+      ZeroCross		      on
     }
     Block {
       BlockType		      Gain
@@ -1296,17 +1316,6 @@ Model {
       ZOrder		      231
       Time		      "t_p"
       After		      "P"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Step
-      Name		      "Pos. Reference\n(Steering wheel)1"
-      SID		      "179"
-      Position		      [-250, 345, -220, 375]
-      ZOrder		      233
-      NamePlacement	      "alternate"
-      Time		      "t1"
-      After		      "E1"
       SampleTime	      "0"
     }
     Block {
@@ -1405,28 +1414,6 @@ Model {
       "392156863])),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',tr"
       "ue,'Version','2016b')),'Version','2016b','Position',[1 41 1536 748.8])"
       NumInputPorts	      "1"
-    }
-    Block {
-      BlockType		      Step
-      Name		      "Step4"
-      SID		      "180"
-      Position		      [-250, 380, -220, 410]
-      ZOrder		      234
-      ShowName		      off
-      Time		      "t2"
-      After		      "E2"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Step
-      Name		      "Step5"
-      SID		      "181"
-      Position		      [-250, 420, -220, 450]
-      ZOrder		      235
-      ShowName		      off
-      Time		      "t3"
-      After		      "E3"
-      SampleTime	      "0"
     }
     Block {
       BlockType		      SubSystem
@@ -1673,20 +1660,6 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Sum
-      Name		      "Sum9"
-      SID		      "182"
-      Ports		      [3, 1]
-      Position		      [-195, 385, -175, 405]
-      ZOrder		      232
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "3"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
-    }
-    Block {
       BlockType		      ToWorkspace
       Name		      "To Workspace1"
       SID		      "172"
@@ -1899,13 +1872,13 @@ Model {
       }
     }
     Line {
-      ZOrder		      1092
-      SrcBlock		      "Sum9"
+      ZOrder		      1144
+      SrcBlock		      "From\nWorkspace"
       SrcPort		      1
-      Points		      [0, 0]
+      Points		      [18, 0]
       Branch {
-	ZOrder			1106
-	Points			[100, 0; 0, -15]
+	ZOrder			1143
+	Points			[97, 0; 0, -15]
 	Branch {
 	  ZOrder		  910
 	  Points		  [0, -30]
@@ -1920,7 +1893,7 @@ Model {
       }
       Branch {
 	ZOrder			1105
-	Points			[-5, 0]
+	Points			[0, 55]
 	DstBlock		"To Workspace1"
 	DstPort			1
       }
@@ -2103,29 +2076,6 @@ Model {
       DstBlock		      "Sum6"
       DstPort		      1
     }
-    Line {
-      ZOrder		      1053
-      SrcBlock		      "Pos. Reference\n(Steering wheel)1"
-      SrcPort		      1
-      Points		      [30, 0]
-      DstBlock		      "Sum9"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      1054
-      SrcBlock		      "Step4"
-      SrcPort		      1
-      DstBlock		      "Sum9"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      1055
-      SrcBlock		      "Step5"
-      SrcPort		      1
-      Points		      [30, 0]
-      DstBlock		      "Sum9"
-      DstPort		      3
-    }
     Annotation {
       SID		      "156"
       Name		      "Sistema Real T. Discreto."
@@ -2139,7 +2089,7 @@ Model {
       BackgroundColor	      "[0.901961, 0.960784, 1.000000]"
       DropShadow	      on
       AnnotationType	      "area_annotation"
-      ZOrder		      1023
+      ZOrder		      1033
       FontSize		      12
     }
     Annotation {
@@ -2155,7 +2105,7 @@ Model {
       BackgroundColor	      "[0.956863, 0.980392, 0.921569]"
       DropShadow	      on
       AnnotationType	      "area_annotation"
-      ZOrder		      1021
+      ZOrder		      1031
       FontSize		      12
     }
     Annotation {
@@ -2171,7 +2121,7 @@ Model {
       BackgroundColor	      "[0.901961, 0.901961, 1.000000]"
       DropShadow	      on
       AnnotationType	      "area_annotation"
-      ZOrder		      1020
+      ZOrder		      1030
       FontSize		      12
     }
     Annotation {
@@ -2187,7 +2137,7 @@ Model {
       BackgroundColor	      "[0.901961, 0.901961, 1.000000]"
       DropShadow	      on
       AnnotationType	      "area_annotation"
-      ZOrder		      1019
+      ZOrder		      1029
       FontSize		      12
     }
     Annotation {
@@ -2203,7 +2153,7 @@ Model {
       BackgroundColor	      "[0.972549, 0.952941, 0.929412]"
       DropShadow	      on
       AnnotationType	      "area_annotation"
-      ZOrder		      1022
+      ZOrder		      1032
       FontSize		      12
     }
   }

@@ -4,7 +4,7 @@ clc
 clear variables
 
 % Ensayo
-load('Ensayo0.mat')
+load('Ensayo2.mat')
 
 % Declaración de variables
 Periodo     = zeros(1,length(Time_Encoder));
@@ -28,7 +28,10 @@ sample_time = mean(Periodo(2:length(Periodo)));
 
 % Procesado de los vectores de datos
 PWM = Eje_x * 254;
-Out = Encoder0*337/(500*100);
+%Out = Encoder0/150.6995;
+Out0 = Encoder0*337/(500*100);
+Out = Encoder0*0.00674;
+Prueba = Out0-Out;
     % Las señales de "Encoder0" poseen unidades en ticks, no obstante, se
     % aplica un coeficiente obtenido de la comparación de la respuesta del
     % encoder incremental y absoluto (337).
@@ -41,21 +44,21 @@ ADC = (ADC0 - 512)*4.88/66;
 
 % Representación
 figure(1)
-%subplot(3,1,1)
+% subplot(3,1,1)
 subplot(4,1,1)
 plot(time_out1,Out)
 xlim([lim_inf lim_sup])
 title('Posición del motor')
-ylabel('Posición []')
+ylabel('Posición [º]')
 xlabel('Tiempo [s]')
-%subplot(3,1,2)
+% subplot(3,1,2)
 subplot(4,1,2)
 plot(time_out1,rpm)
 xlim([lim_inf lim_sup])
 title('Velocidad del motor')
 ylabel('Velocidad [_/s]')
 xlabel('Tiempo [s]')
-%subplot(3,1,3)
+% subplot(3,1,3)
 subplot(4,1,3)
 plot(time_in1,PWM)
 xlim([lim_inf lim_sup])

@@ -4,7 +4,7 @@ clc
 clear variables
 
 % Ensayo
-load('Ensayo6.mat')
+load('Ensayo5.mat')
 
 % Declaración de variables
 Periodo     = zeros(1,length(Time_Encoder));
@@ -44,17 +44,20 @@ Salida   = [time_out1(2:length(time_out1)) rpm(2:length(rpm))];
 Posicion = [time_out1(2:length(time_out1)) Out(2:length(Out))-Out(2)];
 k   = -1.1735;
 tau = 0.02833663927;
+tr  = 0.15;
+Gs  = tf(k,[tau 1],'InputDelay',tr)
 sim('Validacion');
 figure(2)
-subplot(3,1,1)
-plot(Tiempo,Comparacion_pos)
-xlim([lim_inf lim_sup])
-title('Posición del motor')
-ylabel('Posición [º]')
-xlabel('Tiempo [s]')
-legend('Salida','Modelo discreto','Modelo continuo', 'location', 'best')
-hold on
-subplot(3,1,2)
+% subplot(3,1,1)
+% plot(Tiempo,Comparacion_pos)
+% xlim([lim_inf lim_sup])
+% title('Posición del motor')
+% ylabel('Posición [º]')
+% xlabel('Tiempo [s]')
+% legend('Salida','Modelo discreto','Modelo continuo', 'location', 'best')
+% hold on
+% subplot(3,1,2)
+subplot(2,1,1)
 plot(Tiempo,Comparacion_vel)
 xlim([lim_inf lim_sup])
 title('Velocidad del motor')
@@ -62,7 +65,8 @@ ylabel('Valocidad [º/s]')
 xlabel('Tiempo [s]')
 legend('Salida','Modelo discreto','Modelo continuo', 'location', 'best')
 hold on
-subplot(3,1,3)
+% subplot(3,1,3)
+subplot(2,1,2)
 plot(time_in1,PWM)
 xlim([lim_inf lim_sup])
 title('Señal de control')

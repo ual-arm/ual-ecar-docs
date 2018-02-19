@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -342,22 +342,6 @@
 <pad name="F1" x="7.62" y="2.54" drill="0.8" shape="long" rot="R180"/>
 <pad name="F2" x="16.51" y="7.62" drill="0.8" shape="long" rot="R180"/>
 <pad name="A1" x="21.59" y="2.54" drill="0.8" shape="long" rot="R180"/>
-</package>
-<package name="RASPBERRY_PI_3B">
-<polygon width="0.127" layer="21" pour="hatch">
-<vertex x="1.27" y="0"/>
-<vertex x="20.32" y="0"/>
-<vertex x="20.32" y="12.7"/>
-<vertex x="1.27" y="12.7"/>
-</polygon>
-<pad name="P$1" x="20.32" y="11.43" drill="0.6" shape="square"/>
-<pad name="P$2" x="20.32" y="10.16" drill="0.6" shape="square"/>
-<pad name="P$3" x="20.32" y="7.62" drill="0.6" shape="square"/>
-<pad name="P$4" x="20.32" y="6.35" drill="0.6" shape="square"/>
-<pad name="P$5" x="20.32" y="2.54" drill="0.6" shape="square"/>
-<pad name="P$6" x="12.7" y="0" drill="0.6" shape="square"/>
-<pad name="P$7" x="6.35" y="0" drill="0.6" shape="square"/>
-<pad name="P$8" x="5.08" y="0" drill="0.6" shape="square"/>
 </package>
 <package name="MOTOR_DIRECCION">
 <pad name="P$1" x="0" y="8.89" drill="0.6" shape="square"/>
@@ -780,66 +764,6 @@ E6B2-CWZ3E</text>
 <wire x1="0" y1="170.18" x2="0" y2="0" width="0.254" layer="94"/>
 <text x="10.16" y="50.8" size="30" layer="94"> MOTOR DC-DC
 Potencia 4.3 kW</text>
-</symbol>
-<symbol name="RASPBERRY_PI_3">
-<wire x1="0" y1="0" x2="86.36" y2="0" width="0.254" layer="94"/>
-<wire x1="86.36" y1="0" x2="86.36" y2="55.88" width="0.254" layer="94"/>
-<wire x1="86.36" y1="55.88" x2="0" y2="55.88" width="0.254" layer="94"/>
-<wire x1="0" y1="55.88" x2="0" y2="0" width="0.254" layer="94"/>
-<polygon width="0.254" layer="94" pour="hatch">
-<vertex x="5.08" y="2.54"/>
-<vertex x="12.7" y="2.54"/>
-<vertex x="12.7" y="0"/>
-<vertex x="5.08" y="0"/>
-</polygon>
-<polygon width="0.254" layer="94" pour="hatch">
-<vertex x="22.86" y="7.62"/>
-<vertex x="35.56" y="7.62"/>
-<vertex x="35.56" y="0"/>
-<vertex x="22.86" y="0"/>
-</polygon>
-<polygon width="0.254" layer="94" pour="hatch">
-<vertex x="86.36" y="12.7"/>
-<vertex x="86.36" y="2.54"/>
-<vertex x="71.12" y="2.54"/>
-<vertex x="68.58" y="2.54"/>
-<vertex x="68.58" y="15.24"/>
-<vertex x="86.36" y="15.24"/>
-</polygon>
-<polygon width="0.254" layer="94" pour="hatch">
-<vertex x="86.36" y="53.34"/>
-<vertex x="83.82" y="53.34"/>
-<vertex x="83.82" y="48.26"/>
-<vertex x="86.36" y="48.26"/>
-</polygon>
-<polygon width="0.254" layer="94" pour="hatch">
-<vertex x="86.36" y="45.72"/>
-<vertex x="83.82" y="45.72"/>
-<vertex x="83.82" y="40.64"/>
-<vertex x="86.36" y="40.64"/>
-</polygon>
-<polygon width="0.254" layer="94" pour="hatch">
-<vertex x="86.36" y="38.1"/>
-<vertex x="83.82" y="38.1"/>
-<vertex x="83.82" y="33.02"/>
-<vertex x="86.36" y="33.02"/>
-</polygon>
-<polygon width="0.254" layer="94" pour="hatch">
-<vertex x="86.36" y="30.48"/>
-<vertex x="83.82" y="30.48"/>
-<vertex x="83.82" y="25.4"/>
-<vertex x="86.36" y="25.4"/>
-</polygon>
-<pin name="USB1" x="91.44" y="50.8" length="middle" rot="R180"/>
-<pin name="USB2" x="91.44" y="43.18" length="middle" rot="R180"/>
-<pin name="USB3" x="91.44" y="35.56" length="middle" rot="R180"/>
-<pin name="USB4" x="91.44" y="27.94" length="middle" rot="R180"/>
-<pin name="ETHERNET" x="91.44" y="10.16" length="middle" rot="R180"/>
-<pin name="HDMI" x="27.94" y="-5.08" length="middle" rot="R90"/>
-<pin name="VCC" x="7.62" y="-2.54" length="short" rot="R90"/>
-<pin name="GND" x="10.16" y="-2.54" length="short" rot="R90"/>
-<text x="5.08" y="20.32" size="10" layer="94">RASPBERRY 
-    PI 3B</text>
 </symbol>
 <symbol name="MOTOR_DIRECCION">
 <wire x1="0" y1="0" x2="0" y2="109.22" width="0.254" layer="94"/>
@@ -1376,28 +1300,6 @@ Motor Driver 36v20CS</text>
 </device>
 </devices>
 </deviceset>
-<deviceset name="RASPBERRY_PI_3B">
-<gates>
-<gate name="G$1" symbol="RASPBERRY_PI_3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="RASPBERRY_PI_3B">
-<connects>
-<connect gate="G$1" pin="ETHERNET" pad="P$5"/>
-<connect gate="G$1" pin="GND" pad="P$7"/>
-<connect gate="G$1" pin="HDMI" pad="P$6"/>
-<connect gate="G$1" pin="USB1" pad="P$1"/>
-<connect gate="G$1" pin="USB2" pad="P$2"/>
-<connect gate="G$1" pin="USB3" pad="P$3"/>
-<connect gate="G$1" pin="USB4" pad="P$4"/>
-<connect gate="G$1" pin="VCC" pad="P$8"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="MOTOR_DIRECCION">
 <gates>
 <gate name="G$1" symbol="MOTOR_DIRECCION" x="0" y="0"/>
@@ -1539,11 +1441,11 @@ Motor Driver 36v20CS</text>
 </deviceset>
 </devicesets>
 </library>
-<library name="display-hp" urn="urn:adsk.eagle:library:212">
+<library name="display-hp">
 <description>&lt;b&gt;Hewlett Packard LED Displays&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="HLMP6" urn="urn:adsk.eagle:footprint:12942/1" library_version="1">
+<package name="HLMP6">
 <description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
 2 mm horizontal, RM 2.54 mm</description>
 <wire x1="-2.413" y1="-1.27" x2="2.921" y2="-1.27" width="0.1524" layer="21"/>
@@ -1564,14 +1466,8 @@ Motor Driver 36v20CS</text>
 <text x="3.429" y="-1.397" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
-<packages3d>
-<package3d name="HLMP6" urn="urn:adsk.eagle:package:12992/1" type="box" library_version="1">
-<description>LED
-2 mm horizontal, RM 2.54 mm</description>
-</package3d>
-</packages3d>
 <symbols>
-<symbol name="LED" urn="urn:adsk.eagle:symbol:12940/1" library_version="1">
+<symbol name="LED">
 <wire x1="1.27" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
@@ -1595,7 +1491,7 @@ Motor Driver 36v20CS</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="HLMP6" urn="urn:adsk.eagle:component:13019/1" prefix="D" library_version="1">
+<deviceset name="HLMP6" prefix="D">
 <description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
 2mm horizontal</description>
 <gates>
@@ -1607,9 +1503,6 @@ Motor Driver 36v20CS</text>
 <connect gate="A" pin="A" pad="A"/>
 <connect gate="A" pin="K" pad="K"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:12992/1"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="MF" value="AGILENT TECHNOLOGIES" constant="no"/>
@@ -1660,12 +1553,11 @@ Motor Driver 36v20CS</text>
 <part name="U$28" library="ecar" deviceset="MONITOR" device=""/>
 <part name="U$29" library="ecar" deviceset="SICK" device=""/>
 <part name="U$30" library="ecar" deviceset="MOTOR_SENSORES" device=""/>
-<part name="U$31" library="ecar" deviceset="RASPBERRY_PI_3B" device=""/>
 <part name="U$1" library="ecar" deviceset="MOTOR_DIRECCION" device=""/>
 <part name="U$34" library="ecar" deviceset="POLOLU_HIGH-POWER_MOTOR_DRIVER" device=""/>
 <part name="U$35" library="ecar" deviceset="AMPERIMETRO" device=""/>
 <part name="U$17" library="ecar" deviceset="GPS" device=""/>
-<part name="D1" library="display-hp" library_urn="urn:adsk.eagle:library:212" deviceset="HLMP6" device="" package3d_urn="urn:adsk.eagle:package:12992/1"/>
+<part name="D1" library="display-hp" deviceset="HLMP6" device=""/>
 <part name="U$32" library="ecar" deviceset="RELE_ARDUINO" device=""/>
 <part name="U$36" library="ecar" deviceset="LIBRE_DAQ" device=""/>
 <part name="U$24" library="ecar" deviceset="CLARAQUINO_V1.0" device=""/>
@@ -1704,7 +1596,6 @@ MARRON_VACIO(M2)</text>
 <wire x1="1353.82" y1="469.9" x2="1356.36" y2="467.36" width="0.508" layer="90"/>
 <wire x1="1356.36" y1="467.36" x2="1356.36" y2="193.04" width="0.508" layer="90"/>
 <wire x1="1356.36" y1="193.04" x2="1353.82" y2="190.5" width="0.508" layer="90"/>
-<wire x1="1353.82" y1="190.5" x2="1155.7" y2="190.5" width="0.508" layer="90"/>
 <wire x1="1155.7" y1="190.5" x2="1153.16" y2="193.04" width="0.508" layer="90"/>
 <wire x1="1153.16" y1="193.04" x2="1153.16" y2="467.36" width="0.508" layer="90"/>
 <wire x1="1153.16" y1="467.36" x2="1155.7" y2="469.9" width="0.508" layer="90"/>
@@ -1720,8 +1611,10 @@ MARRON_VACIO(M2)</text>
 <text x="1343.66" y="510.54" size="1.778" layer="97" rot="R90">Manguera_Encoder_Incremental</text>
 <text x="1391.92" y="444.5" size="1.778" layer="97" rot="R90">Manguera_Encoder_Absoluto</text>
 <text x="1584.96" y="472.44" size="1.778" layer="97">Manguera_Encoder_Absoluto</text>
-<text x="1295.4" y="307.34" size="10.16" layer="97" rot="R90">CAJA AZUL</text>
+<text x="1295.4" y="307.34" size="10.16" layer="97" rot="R90">CAJA BLANCA</text>
 <text x="1348.74" y="269.24" size="17.78" layer="90" rot="R90">CAJA BLANCA</text>
+<text x="1366.52" y="264.16" size="1.778" layer="91">==&gt; Pedal switch!</text>
+<wire x1="1155.7" y1="190.5" x2="1353.82" y2="190.5" width="0.508" layer="90"/>
 </plain>
 <instances>
 <instance part="U$2" gate="G$1" x="38.1" y="535.94"/>
@@ -1751,7 +1644,6 @@ MARRON_VACIO(M2)</text>
 <instance part="U$28" gate="G$1" x="1049.02" y="335.28" rot="R270"/>
 <instance part="U$29" gate="G$1" x="1770.38" y="342.9" rot="R270"/>
 <instance part="U$30" gate="G$1" x="1676.4" y="-45.72" rot="R90"/>
-<instance part="U$31" gate="G$1" x="1328.42" y="251.46" rot="R180"/>
 <instance part="U$1" gate="G$1" x="1617.98" y="490.22" rot="R90"/>
 <instance part="U$34" gate="G$1" x="1206.5" y="419.1"/>
 <instance part="U$35" gate="G$1" x="797.56" y="104.14"/>
@@ -1996,16 +1888,6 @@ MARRON_VACIO(M2)</text>
 <wire x1="1744.98" y1="312.42" x2="1747.52" y2="309.88" width="0.762" layer="92"/>
 <label x="1254.76" y="487.68" size="1.778" layer="95"/>
 <label x="1369.06" y="444.5" size="1.778" layer="95" rot="R90"/>
-</segment>
-</bus>
-<bus name="B$1">
-<segment>
-<wire x1="1165.86" y1="198.12" x2="1165.86" y2="251.46" width="0.762" layer="92"/>
-<wire x1="1165.86" y1="251.46" x2="1170.94" y2="256.54" width="0.762" layer="92"/>
-<wire x1="1170.94" y1="256.54" x2="1252.22" y2="256.54" width="0.762" layer="92"/>
-<wire x1="1252.22" y1="256.54" x2="1252.22" y2="302.26" width="0.762" layer="92"/>
-<wire x1="1252.22" y1="302.26" x2="1254.76" y2="304.8" width="0.762" layer="92"/>
-<wire x1="1254.76" y1="304.8" x2="1259.84" y2="304.8" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="B$2">
@@ -2504,7 +2386,6 @@ MARRON_VACIO(M2)</text>
 <wire x1="1066.8" y1="477.52" x2="1069.34" y2="474.98" width="0.508" layer="91"/>
 <wire x1="1069.34" y1="474.98" x2="1323.34" y2="474.98" width="0.508" layer="91"/>
 <wire x1="1323.34" y1="474.98" x2="1323.34" y2="419.1" width="0.508" layer="91"/>
-<pinref part="U$31" gate="G$1" pin="GND"/>
 <wire x1="1318.26" y1="254" x2="1320.8" y2="256.54" width="0.508" layer="91"/>
 <wire x1="1320.8" y1="256.54" x2="1320.8" y2="414.02" width="0.508" layer="91"/>
 <wire x1="1320.8" y1="414.02" x2="1323.34" y2="419.1" width="0.508" layer="91"/>
@@ -2537,7 +2418,6 @@ MARRON_VACIO(M2)</text>
 <wire x1="1320.8" y1="472.44" x2="1320.8" y2="419.1" width="0.508" layer="91"/>
 <wire x1="1320.8" y1="419.1" x2="1323.34" y2="414.02" width="0.508" layer="91"/>
 <wire x1="1323.34" y1="414.02" x2="1323.34" y2="256.54" width="0.508" layer="91"/>
-<pinref part="U$31" gate="G$1" pin="VCC"/>
 <wire x1="1323.34" y1="256.54" x2="1320.8" y2="254" width="0.508" layer="91"/>
 <label x="1254.76" y="472.44" size="1.778" layer="95"/>
 </segment>
@@ -3524,6 +3404,11 @@ MARRON_VACIO(M2)</text>
 <wire x1="1318.26" y1="386.08" x2="1308.1" y2="386.08" width="0.508" layer="91"/>
 <label x="1310.64" y="386.08" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="1351.28" y1="266.7" x2="1353.82" y2="264.16" width="0.508" layer="91"/>
+<wire x1="1353.82" y1="264.16" x2="1363.98" y2="264.16" width="0.508" layer="91"/>
+<label x="1358.9" y="264.16" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="K1C" class="0">
 <segment>
@@ -3567,6 +3452,11 @@ MARRON_VACIO(M2)</text>
 <wire x1="1318.26" y1="396.24" x2="1308.1" y2="396.24" width="0.508" layer="91"/>
 <label x="1310.64" y="396.24" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="1351.28" y1="269.24" x2="1353.82" y2="266.7" width="0.508" layer="91"/>
+<wire x1="1353.82" y1="266.7" x2="1363.98" y2="266.7" width="0.508" layer="91"/>
+<label x="1358.9" y="266.7" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="K2I" class="0">
 <segment>
@@ -3574,27 +3464,21 @@ MARRON_VACIO(M2)</text>
 <wire x1="1318.26" y1="391.16" x2="1308.1" y2="391.16" width="0.508" layer="91"/>
 <label x="1310.64" y="391.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="1351.28" y1="264.16" x2="1353.82" y2="261.62" width="0.508" layer="91"/>
+<wire x1="1353.82" y1="261.62" x2="1363.98" y2="261.62" width="0.508" layer="91"/>
+<label x="1358.9" y="261.62" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="HDMI_RBP" class="0">
 <segment>
-<pinref part="U$31" gate="G$1" pin="HDMI"/>
-<wire x1="1300.48" y1="256.54" x2="1297.94" y2="256.54" width="0.508" layer="91"/>
-<wire x1="1297.94" y1="256.54" x2="1295.4" y2="254" width="0.508" layer="91"/>
-<wire x1="1295.4" y1="254" x2="1094.74" y2="254" width="0.508" layer="91"/>
-<wire x1="1094.74" y1="254" x2="1092.2" y2="251.46" width="0.508" layer="91"/>
-<wire x1="1092.2" y1="251.46" x2="1092.2" y2="137.16" width="0.508" layer="91"/>
 <wire x1="1092.2" y1="137.16" x2="1089.66" y2="134.62" width="0.508" layer="91"/>
 <wire x1="1089.66" y1="134.62" x2="1082.04" y2="134.62" width="0.508" layer="91"/>
-<label x="1282.7" y="254" size="1.778" layer="95"/>
-<label x="1097.28" y="254" size="1.778" layer="95"/>
 <label x="1092.2" y="137.16" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="ETHERNET_RBP" class="0">
 <segment>
-<pinref part="U$31" gate="G$1" pin="ETHERNET"/>
-<wire x1="1236.98" y1="241.3" x2="1234.44" y2="243.84" width="0.508" layer="91"/>
-<wire x1="1234.44" y1="243.84" x2="1097.28" y2="243.84" width="0.508" layer="91"/>
 <wire x1="1097.28" y1="243.84" x2="1094.74" y2="241.3" width="0.508" layer="91"/>
 <wire x1="1094.74" y1="241.3" x2="1094.74" y2="-17.78" width="0.508" layer="91"/>
 <wire x1="1094.74" y1="-17.78" x2="1092.2" y2="-20.32" width="0.508" layer="91"/>
@@ -3602,7 +3486,6 @@ MARRON_VACIO(M2)</text>
 <wire x1="1054.1" y1="-20.32" x2="1013.46" y2="-60.96" width="0.508" layer="91"/>
 <wire x1="1013.46" y1="-60.96" x2="464.82" y2="-60.96" width="0.508" layer="91"/>
 <label x="1097.28" y="243.84" size="1.778" layer="95"/>
-<label x="1216.66" y="243.84" size="1.778" layer="95"/>
 <label x="1094.74" y="124.46" size="1.778" layer="95" rot="R90"/>
 <label x="1094.74" y="-15.24" size="1.778" layer="95" rot="R90"/>
 <label x="944.88" y="-60.96" size="1.778" layer="95"/>
@@ -3620,14 +3503,6 @@ MARRON_VACIO(M2)</text>
 </net>
 <net name="USB" class="0">
 <segment>
-<wire x1="1176.02" y1="210.82" x2="1168.4" y2="210.82" width="0.508" layer="91"/>
-<wire x1="1168.4" y1="210.82" x2="1165.86" y2="213.36" width="0.508" layer="91"/>
-<label x="1168.4" y="210.82" size="1.778" layer="95"/>
-<pinref part="U$31" gate="G$1" pin="USB1"/>
-<wire x1="1176.02" y1="210.82" x2="1186.18" y2="200.66" width="0.508" layer="91"/>
-<wire x1="1186.18" y1="200.66" x2="1236.98" y2="200.66" width="0.508" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$24" gate="G$1" pin="USB"/>
 <wire x1="1257.3" y1="312.42" x2="1257.3" y2="304.8" width="0.1524" layer="91"/>
 <label x="1257.3" y="304.8" size="1.778" layer="95" rot="R90"/>
@@ -3642,21 +3517,6 @@ MARRON_VACIO(M2)</text>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
-</note>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports URNs for individual library
-assets (packages, symbols, and devices). The URNs of those assets
-will not be understood (or retained) with this version.
-</note>
-<note version="8.3" severity="warning">
-Since Version 8.3, EAGLE supports the association of 3D packages
-with devices in libraries, schematics, and board files. Those 3D
-packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>

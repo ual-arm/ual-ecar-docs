@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Manual completo del vehículo UAL-eCARM           	                      %%
+%% Author:  Francisco José Mañas Álvarez                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper,openright,twoside,final]{book}
+\input{A0-Paquetes-Formato.tex}
+
+% PORTADA
+\title{\Huge \textbf{UAL-eCARM} \\ \huge Manual descriptivo completo}
+% Author
+\author{\textsc{Grupo de Automática, Robótica y Mecatrónica (ARM).}}
+
+\begin{document}
+\frontmatter
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+\maketitle
+\afterpage{\blankpage}
+
+% INDICES
+\tableofcontents
+\afterpage{\blankpage}
+\listoffigures
+\afterpage{\blankpage}
+\listoftables
+\afterpage{\blankpage}
+\mainmatter
+
+% Capítulo 1. Introducción
+\input{C1-Introduccion.tex}
+% Revisión Bibliográfica
+% Se podría realizar una búsqueda bibliográfica de artículos importantes.
+% Capítulo 2. Historia/Revisión Bibliográfica
+\input{C2-Historia.tex}
+% Capítulo 3. Componentes del vehículo
+\input{C3-Componentes.tex}
+% Capítulo 4. Firmware
+\input{C4-Firmware.tex}
+% Capítulo 5. ROS
+\input{C5-ROS.tex}
+% Capítulo 6. Sistema de dirección
+\input{C6-Direccion.tex}
+% Capítulo 7. Sistema de tracción
+\input{C7-Traccion.tex}
+% Capítulo 8. Simuladores
+\input{C8-Simuladores.tex}
+% Capítulo 9. Arquitectura de control
+\input{C9-Control.tex}
+
+\bibliographystyle{ieeetr}
+\bibliography{Bibliografia}
+
+\end{document}

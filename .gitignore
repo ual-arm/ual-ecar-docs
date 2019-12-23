@@ -8,3 +8,10 @@
 *.*#7
 *.*#8
 *.*#9
+*.aux
+*.bbl
+*.blg
+*.log
+*.pdf
+*.spl
+*.synctex.gz

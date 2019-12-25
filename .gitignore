@@ -12,7 +12,6 @@
 *.bbl
 *.blg
 *.log
-*.pdf
 *.spl
 *.synctex.gz
 Manual/.DS_Store
